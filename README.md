@@ -120,7 +120,7 @@ Example:
 ## Clone 
 Please include lfs in clone command 
 ```bash
-git lfs clone  https://github.com/rourabpaul1986/Auto_FastFlow_fpga.git
+git lfs clone  https://github.com/rourabpaul1986/fastflow_fpga_stacks.git
 ```
 You can also compile and run host programs as follows:
 
