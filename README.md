@@ -104,7 +104,8 @@ The above mentioned command takes 3 connectivity.ini file named as vadd_connecti
 ## Compile host
 ```bash
 cd auto_fast_flow
-python3 main.py
+python3 main.py 0 64 1024 input_file/proc_flow1.csv
+64 is Stream Size and 1024 is the number of stream
 # the main.py has 3 responsibility
 #1 . takes 2 files as input 1)input_files/proc_flow.csv and 2)input_files/circuit.csv
 #2 . generates host.cpp to run in host computer
