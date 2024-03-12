@@ -10,8 +10,8 @@ FFINCLUDE = -I ~/fastflow -DTRACE_FASTFLOW
 
 
 
-test_host: host
-	./host ../kernels/vadd4_vinc4_vmul4.xclbin  0 8 4		
+test_host : host
+	./host ../kernels/vadd4_vinc4_vmul4.xclbin  $(c) $(n) $(m)		
 test_4: test4
 	./test4 ../kernels/vadd4_vinc4_vmul4.xclbin  0 8 4	
 
@@ -20,4 +20,3 @@ clean:
 
 cleanall:
 	$(RM) -rf sd_host *.o *.xo _x .run .Xil *.xclbin *.ltx *.log *.info *compile_summary* vitis_analyzer* *link_summary* *.o main emconfig.json device_trace_0.csv *.xclbin.package_summary opencl_trace.csv xrt.run_summary summary.csv .ipcache waveform_prefs.json
-
