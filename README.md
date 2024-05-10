@@ -31,15 +31,14 @@ The above mentioned command generate connectivity.cfg files named as vadd_connec
 cd auto_fast_flow
 python3 main.py test
 # the main.py has 3 responsibility
+```
  takes 5 process flows stored inside test_case directory as input and check whether it is giving desired outputs or not
 
-```
+
 ## Compile process flows
-python3 main.py c n m proc_file.csv circuit.csv ff  where n=stream size and m=no.of stream & path of proc_file.csv
-Usage:
-        ./[outputfile] [file.xclbin] [chain_tasks] [vec_elems] [vec_nums]
-Example:
-        ./host ../kernels/vadd4_vinc4_vmul4.link.xclbin  0 8 4
+Below command deploy the process flow mentioned  proc_file.csv file on the FPGAs.
+```bash
+python3 main.py c n m proc_file.csv circuit.csv ff 
 ```
 ```
 ## Clone 
