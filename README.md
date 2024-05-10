@@ -9,8 +9,8 @@ The `auto_fast_flow` program is capable to execute farms and pipes of different 
 #1. ./input_file/process_flow.csv
 #2. ./input_file/circuit.csv
 ```
-process flows is described in ./input_file/process_flow.csv. 
-The available computation units are mentioned in ./input_file/circuit.csv.
+process flows is described in ./input_file/circuit1/process_flow1.csv. 
+The available computation units are mentioned in ./input_file/circuit1/circuit1.csv.
 
 
 
