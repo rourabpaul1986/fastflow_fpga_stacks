@@ -24,7 +24,7 @@ This example project consist of two xclbins
 python3 main.py xclbin ./input_file/circuit1/circuit1.csv to generate xclbin
 ```
 The above mentioned command generate connectivity.cfg files named as vadd_connectivity.cfg,vinc_connectivity.cfg and vmul_connectivity.cfg files. These cfg files are used to mentionmemory connections with multiple computation units.
-## Compile testcases
+## Compile test cases
 ```bash
 cd auto_fast_flow
 python3 main.py test
@@ -32,6 +32,8 @@ python3 main.py test
  takes 5 process flows stored inside test_case directory as input and check whether it is giving desired outputs or not
 
 ```
+## Compile process flows
+python3 main.py c n m proc_file.csv circuit.csv ff  where n=stream size and m=no.of stream & path of proc_file.csv
 Usage:
         ./[outputfile] [file.xclbin] [chain_tasks] [vec_elems] [vec_nums]
 Example:
