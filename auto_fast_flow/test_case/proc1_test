@@ -1,0 +1,199 @@
+g++ -g -std=c++14 -I/tools/Xilinx/Vivado/2023.1/include -I/opt/xilinx/xrt/include/ -I .. -I ../fpga -O3 -L/opt/xilinx/xrt/lib/  -pthread -lrt -lstdc++ -I ~/fastflow -DTRACE_FASTFLOW -o host host.cpp /usr/lib/x86_64-linux-gnu/libOpenCL.so -I. 
+./host ../kernels/vadd4_vinc4_vmul4.xclbin  0 8 4		
+Executing  with ../kernels/vadd4_vinc4_vmul4.xclbin
+Task (0 KB, 0 KB) -> (0 KB)
+
+  chain = 0
+      n = 8(Stream Size )
+      m = 4(No. of Stream)
+
+Loading ../kernels/vadd4_vinc4_vmul4.xclbin bitstream in device id : 0
+
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : Result : 14 loop :7
+0Result :  loop :0
+Result : Result : 2 loop :1
+Result : 4 loop :2
+00Result : 6 loop :0
+ 
+ loop : loop :Result : 2 loop :1
+0
+Result : 4 loop :2
+Result : 6 loop :3
+3
+Result : 
+Result : Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : Result : 0 loop :80
+ loop :Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 414
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+ loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14Result :  loop :0 loop :0
+7
+
+ 
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+  Time : 297 ms
+**************************************************************
+**Rules Check of Task Placement in input_file/proc_flow1.csv**
+**Rules Check of Task Placement in input_file/circuit.csv**
+**************************************************************
+Empty Line Not found in input_file/circuit.csv
+Empty Line Not found in input_file/proc_flow1.csv
+Arm length of workers is OK
+unique FPGAs 1
+Available FPGAs are suffcient to place
+***********************************************
+Required FPGA(s) to map given kernels are : 1
+int input_l_vadd=2;
+int output_l_vadd=1;
+int input_l_vinc=1;
+int output_l_vinc=1;
+int input_l_vmul=2;
+int output_l_vmul=1;
+
+***********************************************
+***********************************************
+circuits available in xclbin are ['"vadd"', '"vinc"', '"vmul"']
+***********************************************
+Text has been written to ../fpga/param.h
+-------------start---------------------
+(' 0', ' 1', 4)
+----------------------------------
+0.0005240440368652344

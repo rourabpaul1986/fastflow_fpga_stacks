@@ -1,0 +1,13 @@
+<pragmas>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vinc/vinc.cpp" line="45" pragmaType="loop_tripcount" parentfunction="load_input" min="4096" max="4096" avg="4096"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vinc/vinc.cpp" line="55" pragmaType="loop_tripcount" parentfunction="compute_inc" min="4096" max="4096" avg="4096"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vinc/vinc.cpp" line="63" pragmaType="loop_tripcount" parentfunction="store_result" min="4096" max="4096" avg="4096"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 0>::operator<<(unsigned int const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vinc/vinc.cpp" line="86" pragmaType="dataflow" parentfunction="vinc" disable_start_propagation="0"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vinc/vinc.cpp" line="80" pragmaType="interface" parentfunction="vinc" mode="m_axi" port="in1" bundle="gmem0" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vinc/vinc.cpp" line="81" pragmaType="interface" parentfunction="vinc" mode="m_axi" port="out" bundle="gmem0" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 0>::stream(char const*)" off="0" region="0" recursive="0"/>
+</pragmas>

@@ -1,0 +1,172 @@
+g++ -g -std=c++14 -I/tools/Xilinx/Vivado/2023.1/include -I/opt/xilinx/xrt/include/ -I .. -I ../fpga -O3 -L/opt/xilinx/xrt/lib/  -pthread -lrt -lstdc++ -I ~/fastflow -DTRACE_FASTFLOW -o host host.cpp /usr/lib/x86_64-linux-gnu/libOpenCL.so -I. 
+./host ../kernels/vadd4_vinc4_vmul4.xclbin  test 8 4		
+Executing  with ../kernels/vadd4_vinc4_vmul4.xclbin
+Task (0 KB, 0 KB) -> (0 KB)
+
+  chain = 0
+      n = 8(Stream Size )
+      m = 4(No. of Stream)
+
+Loading ../kernels/vadd4_vinc4_vmul4.xclbin bitstream in device id : 0
+
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+  Time : 302 ms

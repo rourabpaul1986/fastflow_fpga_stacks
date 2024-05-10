@@ -1,0 +1,50 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "3 3 1 2",
+    "file": "vadd.cpp",
+    "fileloc": 87,
+    "instructions": 43,
+    "loads": {
+      "G": 3
+    },
+    "name": "vadd",
+    "stores": {
+      "G": 3
+    },
+    "total_instructions": 111
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "vadd.cpp",
+    "fileloc": 54,
+    "instructions": 17,
+    "name": "compute_add",
+    "total_instructions": 17
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "vadd.cpp",
+    "fileloc": 67,
+    "instructions": 17,
+    "name": "store_result",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 17
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "vadd.cpp",
+    "fileloc": 46,
+    "instructions": 17,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_input",
+    "total_instructions": 17
+  }
+}

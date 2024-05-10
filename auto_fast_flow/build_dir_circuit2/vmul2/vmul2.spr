@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="vmul2" dir="">
+  <FileSets>
+    <FileSet Name="kernel_vmul2" Type="DesignSrcs">
+      <File Path="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

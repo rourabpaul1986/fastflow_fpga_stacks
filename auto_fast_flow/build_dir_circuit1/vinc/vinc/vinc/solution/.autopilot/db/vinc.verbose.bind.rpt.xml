@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'vinc'" level="0">
+<item name = "Date">Tue May  7 14:23:19 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">vinc</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">virtexuplusHBM</item>
+<item name = "Target device">xcu50-fsvh2104-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4244, 4244, 14.145 us, 14.145 us, 4173, 4173, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln86_entry_proc_fu_124">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_load_input_fu_131">load_input, 4172, 4172, 13.905 us, 13.905 us, 4172, 4172, no</column>
+<column name="grp_compute_inc_fu_142">compute_inc, 4101, 4101, 13.669 us, 13.669 us, 4101, 4101, no</column>
+<column name="grp_store_result_fu_152">store_result, 4170, 4170, 13.899 us, 13.899 us, 4170, 4170, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

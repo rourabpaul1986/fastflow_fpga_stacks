@@ -1,0 +1,361 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/link
+	Log files: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/circuit1.link.xclbin.link_summary, at Tue May  7 14:25:06 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/link/v++_link_circuit1.link_guidance.html', at Tue May  7 14:25:06 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2023.1
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u50_gen3x16_xdma_5_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [14:25:11] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vadd.xo --xo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vinc.xo --xo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vmul.xo -keep --config /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm --target hw --output_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int --temp_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vadd.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vinc.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vmul.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [14:25:14] build_xd_ip_db started: /tools/Xilinx/Vitis/2023.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/hw.hpfm -clkid 0 -ip /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/iprepo/xilinx_com_hls_vmul_1_0,vmul -ip /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/iprepo/xilinx_com_hls_vinc_1_0,vinc -ip /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [14:25:21] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 443.539 ; gain = 0.000 ; free physical = 98824 ; free virtual = 118485
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [14:25:21] cfgen started: /tools/Xilinx/Vitis/2023.1/bin/cfgen  -nk vadd:4 -nk vinc:4 -nk vmul:4 -sp vadd_1.in1:HBM[0] -sp vadd_1.in2:HBM[1] -sp vadd_1.out:HBM[2] -sp vadd_2.in1:HBM[3] -sp vadd_2.in2:HBM[4] -sp vadd_2.out:HBM[5] -sp vadd_3.in1:HBM[6] -sp vadd_3.in2:HBM[7] -sp vadd_3.out:HBM[8] -sp vadd_4.in1:HBM[9] -sp vadd_4.in2:HBM[10] -sp vadd_4.out:HBM[11] -sp vinc_1.in1:HBM[12] -sp vinc_1.out:HBM[13] -sp vinc_2.in1:HBM[14] -sp vinc_2.out:HBM[15] -sp vinc_3.in1:HBM[16] -sp vinc_3.out:HBM[17] -sp vinc_4.in1:HBM[18] -sp vinc_4.out:HBM[19] -sp vmul_1.in1:HBM[20] -sp vmul_1.in2:HBM[21] -sp vmul_1.out:HBM[22] -sp vmul_2.in1:HBM[23] -sp vmul_2.in2:HBM[24] -sp vmul_2.out:HBM[25] -sp vmul_3.in1:HBM[26] -sp vmul_3.in2:HBM[27] -sp vmul_3.out:HBM[28] -sp vmul_4.in1:HBM[29] -sp vmul_4.in2:HBM[30] -sp vmul_4.out:HBM[31] -dpa_mem_offload false -dmclkid 0 -r /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 4  {vadd_1 vadd_2 vadd_3 vadd_4}
+INFO: [CFGEN 83-0]   kernel: vinc, num: 4  {vinc_1 vinc_2 vinc_3 vinc_4}
+INFO: [CFGEN 83-0]   kernel: vmul, num: 4  {vmul_1 vmul_2 vmul_3 vmul_4}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: in1, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: in2, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: out, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: vadd_2, k_port: in1, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: vadd_2, k_port: in2, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: vadd_2, k_port: out, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: vadd_3, k_port: in1, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: vadd_3, k_port: in2, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: vadd_3, k_port: out, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: vadd_4, k_port: in1, sptag: HBM[9]
+INFO: [CFGEN 83-0]   kernel: vadd_4, k_port: in2, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: vadd_4, k_port: out, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: vinc_1, k_port: in1, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: vinc_1, k_port: out, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: vinc_2, k_port: in1, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: vinc_2, k_port: out, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: vinc_3, k_port: in1, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: vinc_3, k_port: out, sptag: HBM[17]
+INFO: [CFGEN 83-0]   kernel: vinc_4, k_port: in1, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: vinc_4, k_port: out, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: vmul_1, k_port: in1, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: vmul_1, k_port: in2, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: vmul_1, k_port: out, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: vmul_2, k_port: in1, sptag: HBM[23]
+INFO: [CFGEN 83-0]   kernel: vmul_2, k_port: in2, sptag: HBM[24]
+INFO: [CFGEN 83-0]   kernel: vmul_2, k_port: out, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: vmul_3, k_port: in1, sptag: HBM[26]
+INFO: [CFGEN 83-0]   kernel: vmul_3, k_port: in2, sptag: HBM[27]
+INFO: [CFGEN 83-0]   kernel: vmul_3, k_port: out, sptag: HBM[28]
+INFO: [CFGEN 83-0]   kernel: vmul_4, k_port: in1, sptag: HBM[29]
+INFO: [CFGEN 83-0]   kernel: vmul_4, k_port: in2, sptag: HBM[30]
+INFO: [CFGEN 83-0]   kernel: vmul_4, k_port: out, sptag: HBM[31]
+INFO: [SYSTEM_LINK 82-37] [14:25:26] cfgen finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 443.539 ; gain = 0.000 ; free physical = 98832 ; free virtual = 118493
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [14:25:26] cf2bd started: /tools/Xilinx/Vitis/2023.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/_sysl/.xsd --temp_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link --output_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [14:25:34] cf2bd finished successfully
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 443.539 ; gain = 0.000 ; free physical = 98828 ; free virtual = 118493
+INFO: [v++ 60-1441] [14:25:34] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 98882 ; free virtual = 118547
+INFO: [v++ 60-1443] [14:25:34] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/sdsl.dat -rtd /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/cf2sw.rtd -nofilter /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/cf2sw_full.rtd -xclbin /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/xclbin_orig.xml -o /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+INFO: [v++ 60-1441] [14:25:43] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 98883 ; free virtual = 118549
+INFO: [v++ 60-1443] [14:25:43] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+INFO: [v++ 60-1441] [14:25:43] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.32 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 98868 ; free virtual = 118535
+INFO: [v++ 60-1443] [14:25:43] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm -s --remote_ip_cache /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/.ipcache --output_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int --log_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/logs/link --report_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/link --config /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/vplConfig.ini -k /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link --no-info --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/xo/ip_repo/xilinx_com_hls_vmul_1_0 --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/xo/ip_repo/xilinx_com_hls_vinc_1_0 --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link/vpl.pb /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+
+****** vpl v2023.1 (64-bit)
+  **** SW Build 3860322 on 2023-05-04-06:32:48
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2023.1
+INFO: [VPL 60-423]   Target device: xilinx_u50_gen3x16_xdma_5_202210_1
+INFO: [VPL 60-1032] Extracting hardware platform to /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/vivado/vpl/.local/hw_platform
+[14:26:00] Run vpl: Step create_project: Started
+Creating Vivado project.
+[14:26:10] Run vpl: Step create_project: Completed
+[14:26:10] Run vpl: Step create_bd: Started
+[14:27:04] Run vpl: Step create_bd: Completed
+[14:27:04] Run vpl: Step update_bd: Started
+[14:27:05] Run vpl: Step update_bd: Completed
+[14:27:05] Run vpl: Step generate_target: Started
+[14:28:21] Run vpl: Step generate_target: RUNNING...
+[14:29:37] Run vpl: Step generate_target: RUNNING...
+[14:30:52] Run vpl: Step generate_target: RUNNING...
+[14:31:02] Run vpl: Step generate_target: Completed
+[14:31:02] Run vpl: Step config_hw_runs: Started
+[14:32:18] Run vpl: Step config_hw_runs: RUNNING...
+[14:33:21] Run vpl: Step config_hw_runs: Completed
+[14:33:21] Run vpl: Step synth: Started
+[14:33:52] Block-level synthesis in progress, 0 of 203 jobs complete, 8 jobs running.
+[14:34:22] Block-level synthesis in progress, 0 of 203 jobs complete, 8 jobs running.
+[14:34:52] Block-level synthesis in progress, 0 of 203 jobs complete, 8 jobs running.
+[14:35:23] Block-level synthesis in progress, 8 of 203 jobs complete, 7 jobs running.
+[14:35:53] Block-level synthesis in progress, 11 of 203 jobs complete, 7 jobs running.
+[14:36:23] Block-level synthesis in progress, 16 of 203 jobs complete, 5 jobs running.
+[14:36:53] Block-level synthesis in progress, 24 of 203 jobs complete, 6 jobs running.
+[14:37:23] Block-level synthesis in progress, 33 of 203 jobs complete, 5 jobs running.
+[14:37:54] Block-level synthesis in progress, 42 of 203 jobs complete, 6 jobs running.
+[14:38:24] Block-level synthesis in progress, 44 of 203 jobs complete, 8 jobs running.
+[14:38:54] Block-level synthesis in progress, 46 of 203 jobs complete, 8 jobs running.
+[14:39:24] Block-level synthesis in progress, 47 of 203 jobs complete, 7 jobs running.
+[14:39:55] Block-level synthesis in progress, 52 of 203 jobs complete, 6 jobs running.
+[14:40:25] Block-level synthesis in progress, 57 of 203 jobs complete, 7 jobs running.
+[14:40:55] Block-level synthesis in progress, 63 of 203 jobs complete, 6 jobs running.
+[14:41:26] Block-level synthesis in progress, 68 of 203 jobs complete, 6 jobs running.
+[14:41:56] Block-level synthesis in progress, 69 of 203 jobs complete, 8 jobs running.
+[14:42:26] Block-level synthesis in progress, 71 of 203 jobs complete, 8 jobs running.
+[14:42:57] Block-level synthesis in progress, 72 of 203 jobs complete, 8 jobs running.
+[14:43:27] Block-level synthesis in progress, 74 of 203 jobs complete, 7 jobs running.
+[14:43:58] Block-level synthesis in progress, 78 of 203 jobs complete, 8 jobs running.
+[14:44:28] Block-level synthesis in progress, 83 of 203 jobs complete, 8 jobs running.
+[14:44:58] Block-level synthesis in progress, 87 of 203 jobs complete, 7 jobs running.
+[14:45:29] Block-level synthesis in progress, 91 of 203 jobs complete, 6 jobs running.
+[14:45:59] Block-level synthesis in progress, 92 of 203 jobs complete, 8 jobs running.
+[14:46:30] Block-level synthesis in progress, 93 of 203 jobs complete, 7 jobs running.
+[14:47:00] Block-level synthesis in progress, 98 of 203 jobs complete, 7 jobs running.
+[14:47:31] Block-level synthesis in progress, 104 of 203 jobs complete, 7 jobs running.
+[14:48:01] Block-level synthesis in progress, 108 of 203 jobs complete, 5 jobs running.
+[14:48:32] Block-level synthesis in progress, 116 of 203 jobs complete, 5 jobs running.
+[14:49:02] Block-level synthesis in progress, 125 of 203 jobs complete, 6 jobs running.
+[14:49:33] Block-level synthesis in progress, 126 of 203 jobs complete, 8 jobs running.
+[14:50:03] Block-level synthesis in progress, 128 of 203 jobs complete, 6 jobs running.
+[14:50:34] Block-level synthesis in progress, 133 of 203 jobs complete, 7 jobs running.
+[14:51:04] Block-level synthesis in progress, 136 of 203 jobs complete, 7 jobs running.
+[14:51:35] Block-level synthesis in progress, 139 of 203 jobs complete, 6 jobs running.
+[14:52:05] Block-level synthesis in progress, 143 of 203 jobs complete, 8 jobs running.
+[14:52:36] Block-level synthesis in progress, 145 of 203 jobs complete, 8 jobs running.
+[14:53:06] Block-level synthesis in progress, 151 of 203 jobs complete, 6 jobs running.
+[14:53:37] Block-level synthesis in progress, 155 of 203 jobs complete, 8 jobs running.
+[14:54:08] Block-level synthesis in progress, 158 of 203 jobs complete, 6 jobs running.
+[14:54:38] Block-level synthesis in progress, 165 of 203 jobs complete, 6 jobs running.
+[14:55:09] Block-level synthesis in progress, 178 of 203 jobs complete, 2 jobs running.
+[14:55:40] Block-level synthesis in progress, 187 of 203 jobs complete, 5 jobs running.
+[14:56:10] Block-level synthesis in progress, 187 of 203 jobs complete, 8 jobs running.
+[14:56:41] Block-level synthesis in progress, 187 of 203 jobs complete, 8 jobs running.
+[14:57:11] Block-level synthesis in progress, 194 of 203 jobs complete, 6 jobs running.
+[14:57:42] Block-level synthesis in progress, 194 of 203 jobs complete, 6 jobs running.
+[14:58:13] Block-level synthesis in progress, 198 of 203 jobs complete, 3 jobs running.
+[14:58:43] Block-level synthesis in progress, 200 of 203 jobs complete, 2 jobs running.
+[14:59:14] Block-level synthesis in progress, 200 of 203 jobs complete, 2 jobs running.
+[14:59:45] Block-level synthesis in progress, 202 of 203 jobs complete, 0 jobs running.
+[15:00:15] Block-level synthesis in progress, 202 of 203 jobs complete, 1 job running.
+[15:00:46] Block-level synthesis in progress, 202 of 203 jobs complete, 1 job running.
+[15:01:17] Top-level synthesis in progress.
+[15:01:47] Top-level synthesis in progress.
+[15:02:18] Top-level synthesis in progress.
+[15:02:49] Top-level synthesis in progress.
+[15:03:08] Run vpl: Step synth: Completed
+[15:03:08] Run vpl: Step impl: Started
+[15:15:26] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 49m 40s 
+
+[15:15:26] Starting logic optimization..
+[15:16:27] Phase 1 Retarget
+[15:16:58] Phase 2 Constant propagation
+[15:17:29] Phase 3 Sweep
+[15:18:00] Phase 4 BUFG optimization
+[15:18:30] Phase 5 Shift Register Optimization
+[15:18:30] Phase 6 Post Processing Netlist
+[15:19:32] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 04m 05s 
+
+[15:19:32] Starting logic placement..
+[15:20:03] Phase 1 Placer Initialization
+[15:20:03] Phase 1.1 Placer Initialization Netlist Sorting
+[15:22:36] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[15:23:37] Phase 1.3 Build Placer Netlist Model
+[15:26:11] Phase 1.4 Constrain Clocks/Macros
+[15:26:42] Phase 2 Global Placement
+[15:26:42] Phase 2.1 Floorplanning
+[15:27:13] Phase 2.1.1 Partition Driven Placement
+[15:27:13] Phase 2.1.1.1 PBP: Partition Driven Placement
+[15:28:14] Phase 2.1.1.2 PBP: Clock Region Placement
+[15:29:16] Phase 2.1.1.3 PBP: Compute Congestion
+[15:29:16] Phase 2.1.1.4 PBP: UpdateTiming
+[15:29:46] Phase 2.1.1.5 PBP: Add part constraints
+[15:30:48] Phase 2.2 Physical Synthesis After Floorplan
+[15:30:48] Phase 2.3 Update Timing before SLR Path Opt
+[15:30:48] Phase 2.4 Post-Processing in Floorplanning
+[15:30:48] Phase 2.5 Global Placement Core
+[15:40:33] Phase 2.5.1 UpdateTiming Before Physical Synthesis
+[15:41:04] Phase 2.5.2 Physical Synthesis In Placer
+[15:46:43] Phase 3 Detail Placement
+[15:46:43] Phase 3.1 Commit Multi Column Macros
+[15:46:43] Phase 3.2 Commit Most Macros & LUTRAMs
+[15:53:54] Phase 3.3 Small Shape DP
+[15:53:54] Phase 3.3.1 Small Shape Clustering
+[15:54:24] Phase 3.3.2 Flow Legalize Slice Clusters
+[15:54:24] Phase 3.3.3 Slice Area Swap
+[15:54:24] Phase 3.3.3.1 Slice Area Swap Initial
+[15:56:58] Phase 3.4 Place Remaining
+[15:56:58] Phase 3.5 Re-assign LUT pins
+[16:01:35] Phase 3.6 Pipeline Register Optimization
+[16:01:35] Phase 3.7 Fast Optimization
+[16:03:08] Phase 4 Post Placement Optimization and Clean-Up
+[16:03:08] Phase 4.1 Post Commit Optimization
+[16:05:11] Phase 4.1.1 Post Placement Optimization
+[16:05:11] Phase 4.1.1.1 BUFG Replication
+[16:05:11] Phase 4.1.1.2 Post Placement Timing Optimization
+[16:14:56] Phase 4.1.1.3 Replication
+[16:16:28] Phase 4.2 Post Placement Cleanup
+[16:16:28] Phase 4.3 Placer Reporting
+[16:16:28] Phase 4.3.1 Print Estimated Congestion
+[16:16:28] Phase 4.4 Final Placement Cleanup
+[16:20:34] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 01m 02s 
+
+[16:20:34] Starting logic routing..
+[16:21:05] Phase 1 Build RT Design
+[16:23:08] Phase 2 Router Initialization
+[16:23:39] Phase 2.1 Fix Topology Constraints
+[16:23:39] Phase 2.2 Pre Route Cleanup
+[16:23:39] Phase 2.3 Global Clock Net Routing
+[16:24:10] Phase 2.4 Update Timing
+[16:26:13] Phase 2.5 Update Timing for Bus Skew
+[16:26:13] Phase 2.5.1 Update Timing
+[16:27:14] Phase 3 Initial Routing
+[16:27:14] Phase 3.1 Global Routing
+[16:28:16] Phase 4 Rip-up And Reroute
+[16:28:16] Phase 4.1 Global Iteration 0
+[16:39:02] Phase 4.2 Global Iteration 1
+[16:40:35] Phase 5 Delay and Skew Optimization
+[16:40:35] Phase 5.1 Delay CleanUp
+[16:40:35] Phase 5.1.1 Update Timing
+[16:41:05] Phase 5.1.2 Update Timing
+[16:42:07] Phase 5.2 Clock Skew Optimization
+[16:42:07] Phase 6 Post Hold Fix
+[16:42:07] Phase 6.1 Hold Fix Iter
+[16:42:38] Phase 6.1.1 Update Timing
+[16:43:39] Phase 7 Leaf Clock Prog Delay Opt
+[16:44:41] Phase 8 Route finalize
+[16:44:41] Phase 9 Verifying routed nets
+[16:44:41] Phase 10 Depositing Routes
+[16:45:42] Phase 11 Resolve XTalk
+[16:45:42] Phase 12 Post Router Timing
+[16:45:42] Phase 12.1 Update Timing
+[16:47:46] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 27m 11s 
+
+[16:47:46] Starting bitstream generation..
+[16:47:46] Phase 13 Post-Route Event Processing
+[16:59:03] Creating bitmap...
+[17:14:57] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+[17:14:57] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 27m 11s 
+Check VPL, containing 12 checks, has run: 0 errors, 2 advisory violations
+ADVISORY: [AUTO-FREQ-SCALING-08] For clock clk_kernel_00_unbuffered_net, the auto scaled frequency 315.5 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 300.0 MHz.
+ADVISORY: [AUTO-FREQ-SCALING-08] For clock hbm_aclk, the auto scaled frequency 468.3 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 450.0 MHz.
+[17:17:40] Run vpl: Step impl: Completed
+[17:17:41] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [17:17:42] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:03:33 ; elapsed = 02:51:58 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 93214 ; free virtual = 114325
+INFO: [v++ 60-1443] [17:17:42] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 300
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/address_map.xml -sdsl /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/sdsl.dat -xclbin /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/xclbin_orig.xml -rtd /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link.rtd -o /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [17:17:50] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 97312 ; free virtual = 118423
+INFO: [v++ 60-1443] [17:17:50] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link.rtd --append-section :JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link_xml.rtd --add-section BUILD_METADATA:JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link.xml --add-section SYSTEM_METADATA:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_5_202210_1 --output /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit1/circuit1.link.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+XRT Build Version: 2.15.225 (2023.1)
+       Build Date: 2023-05-03 10:13:19
+          Hash ID: adf27adb3cfadc6e4c41d6db814159f1329b24f3
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 32720876 bytes
+Format : RAW
+File   : '/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 5676 bytes
+Format : JSON
+File   : '/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 26303 bytes
+Format : RAW
+File   : '/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/circuit1.link.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 105568 bytes
+Format : RAW
+File   : '/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (32897780 bytes) to the output file: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit1/circuit1.link.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [17:17:50] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.15 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 97273 ; free virtual = 118415
+INFO: [v++ 60-1443] [17:17:50] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit1/circuit1.link.xclbin.info --input /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit1/circuit1.link.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+INFO: [v++ 60-1441] [17:17:50] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.45 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 97278 ; free virtual = 118420
+INFO: [v++ 60-1443] [17:17:50] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/run_link
+INFO: [v++ 60-1441] [17:17:50] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 469.137 ; gain = 0.000 ; free physical = 97278 ; free virtual = 118420
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/link/system_estimate_circuit1.link.xtxt
+INFO: [v++ 60-586] Created /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/circuit1.link.ltx
+INFO: [v++ 60-586] Created ./build_dir_circuit1/circuit1.link.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/link/v++_link_circuit1.link_guidance.html
+	Timing Report: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/logs/link/vivado.log
+	Steps Log File: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/circuit1.link.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 2h 52m 54s
+INFO: [v++ 60-1653] Closing dispatch client.

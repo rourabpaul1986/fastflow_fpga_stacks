@@ -1,0 +1,781 @@
+
+
+================================================================
+== Vitis HLS Report for 'load_input'
+================================================================
+* Date:           Tue May  7 18:00:49 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        vmul2
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     4172|     4172|  13.905 us|  13.905 us|  4172|  4172|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 74
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.21>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46]   --->   Operation 75 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (1.21ns)   --->   "%write_ln46 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %size_c11, i32 %size_read" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46]   --->   Operation 76 'write' 'write_ln46' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%empty = trunc i32 %size_read" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46]   --->   Operation 77 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.88ns)   --->   "%icmp_ln48 = icmp_sgt  i32 %size_read, i32 0" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 78 'icmp' 'icmp_ln48' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 79 [1/1] (0.25ns)   --->   "%empty_37 = select i1 %icmp_ln48, i31 %empty, i31 0" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 79 'select' 'empty_37' <Predicate = true> <Delay = 0.25> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.43>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%in_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %in_r" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46]   --->   Operation 80 'read' 'in_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %in_read, i32 2, i32 63" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 81 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%sext_ln48 = sext i62 %trunc_ln" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 82 'sext' 'sext_ln48' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i32 %gmem0, i64 %sext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 83 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln48 = zext i31 %empty_37" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 84 'zext' 'zext_ln48' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 85 [71/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 85 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 2.43>
+ST_3 : Operation 86 [70/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 86 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 2.43>
+ST_4 : Operation 87 [69/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 87 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 2.43>
+ST_5 : Operation 88 [68/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 88 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 2.43>
+ST_6 : Operation 89 [67/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 89 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 2.43>
+ST_7 : Operation 90 [66/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 90 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 2.43>
+ST_8 : Operation 91 [65/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 91 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 2.43>
+ST_9 : Operation 92 [64/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 92 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 2.43>
+ST_10 : Operation 93 [63/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 93 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 2.43>
+ST_11 : Operation 94 [62/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 94 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 2.43>
+ST_12 : Operation 95 [61/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 95 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 2.43>
+ST_13 : Operation 96 [60/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 96 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 2.43>
+ST_14 : Operation 97 [59/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 97 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 2.43>
+ST_15 : Operation 98 [58/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 98 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 2.43>
+ST_16 : Operation 99 [57/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 99 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 2.43>
+ST_17 : Operation 100 [56/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 100 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 2.43>
+ST_18 : Operation 101 [55/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 101 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 2.43>
+ST_19 : Operation 102 [54/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 102 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 2.43>
+ST_20 : Operation 103 [53/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 103 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 20> <Delay = 2.43>
+ST_21 : Operation 104 [52/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 104 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 21> <Delay = 2.43>
+ST_22 : Operation 105 [51/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 105 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 22> <Delay = 2.43>
+ST_23 : Operation 106 [50/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 106 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 23> <Delay = 2.43>
+ST_24 : Operation 107 [49/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 107 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 24> <Delay = 2.43>
+ST_25 : Operation 108 [48/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 108 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 25> <Delay = 2.43>
+ST_26 : Operation 109 [47/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 109 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 26> <Delay = 2.43>
+ST_27 : Operation 110 [46/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 110 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 27> <Delay = 2.43>
+ST_28 : Operation 111 [45/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 111 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 28> <Delay = 2.43>
+ST_29 : Operation 112 [44/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 112 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 29> <Delay = 2.43>
+ST_30 : Operation 113 [43/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 113 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 30> <Delay = 2.43>
+ST_31 : Operation 114 [42/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 114 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 31> <Delay = 2.43>
+ST_32 : Operation 115 [41/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 115 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 32> <Delay = 2.43>
+ST_33 : Operation 116 [40/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 116 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 33> <Delay = 2.43>
+ST_34 : Operation 117 [39/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 117 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 35 <SV = 34> <Delay = 2.43>
+ST_35 : Operation 118 [38/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 118 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 35> <Delay = 2.43>
+ST_36 : Operation 119 [37/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 119 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 36> <Delay = 2.43>
+ST_37 : Operation 120 [36/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 120 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 37> <Delay = 2.43>
+ST_38 : Operation 121 [35/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 121 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 38> <Delay = 2.43>
+ST_39 : Operation 122 [34/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 122 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 39> <Delay = 2.43>
+ST_40 : Operation 123 [33/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 123 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 40> <Delay = 2.43>
+ST_41 : Operation 124 [32/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 124 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 42 <SV = 41> <Delay = 2.43>
+ST_42 : Operation 125 [31/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 125 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 43 <SV = 42> <Delay = 2.43>
+ST_43 : Operation 126 [30/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 126 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 43> <Delay = 2.43>
+ST_44 : Operation 127 [29/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 127 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 44> <Delay = 2.43>
+ST_45 : Operation 128 [28/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 128 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 45> <Delay = 2.43>
+ST_46 : Operation 129 [27/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 129 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 46> <Delay = 2.43>
+ST_47 : Operation 130 [26/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 130 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 48 <SV = 47> <Delay = 2.43>
+ST_48 : Operation 131 [25/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 131 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 49 <SV = 48> <Delay = 2.43>
+ST_49 : Operation 132 [24/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 132 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 50 <SV = 49> <Delay = 2.43>
+ST_50 : Operation 133 [23/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 133 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 51 <SV = 50> <Delay = 2.43>
+ST_51 : Operation 134 [22/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 134 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 52 <SV = 51> <Delay = 2.43>
+ST_52 : Operation 135 [21/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 135 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 53 <SV = 52> <Delay = 2.43>
+ST_53 : Operation 136 [20/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 136 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 54 <SV = 53> <Delay = 2.43>
+ST_54 : Operation 137 [19/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 137 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 54> <Delay = 2.43>
+ST_55 : Operation 138 [18/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 138 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 55> <Delay = 2.43>
+ST_56 : Operation 139 [17/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 139 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 56> <Delay = 2.43>
+ST_57 : Operation 140 [16/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 140 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 57> <Delay = 2.43>
+ST_58 : Operation 141 [15/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 141 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 59 <SV = 58> <Delay = 2.43>
+ST_59 : Operation 142 [14/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 142 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 60 <SV = 59> <Delay = 2.43>
+ST_60 : Operation 143 [13/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 143 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 61 <SV = 60> <Delay = 2.43>
+ST_61 : Operation 144 [12/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 144 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 62 <SV = 61> <Delay = 2.43>
+ST_62 : Operation 145 [11/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 145 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 63 <SV = 62> <Delay = 2.43>
+ST_63 : Operation 146 [10/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 146 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 64 <SV = 63> <Delay = 2.43>
+ST_64 : Operation 147 [9/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 147 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 65 <SV = 64> <Delay = 2.43>
+ST_65 : Operation 148 [8/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 148 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 66 <SV = 65> <Delay = 2.43>
+ST_66 : Operation 149 [7/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 149 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 67 <SV = 66> <Delay = 2.43>
+ST_67 : Operation 150 [6/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 150 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 68 <SV = 67> <Delay = 2.43>
+ST_68 : Operation 151 [5/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 151 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 69 <SV = 68> <Delay = 2.43>
+ST_69 : Operation 152 [4/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 152 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 70 <SV = 69> <Delay = 2.43>
+ST_70 : Operation 153 [3/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 153 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 71 <SV = 70> <Delay = 2.43>
+ST_71 : Operation 154 [2/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 154 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 72 <SV = 71> <Delay = 2.43>
+ST_72 : Operation 155 [1/71] (2.43ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i32 %zext_ln48" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 155 'readreq' 'empty_38' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 73 <SV = 72> <Delay = 1.26>
+ST_73 : Operation 156 [1/1] (0.00ns)   --->   "%empty_39 = wait i32 @_ssdm_op_Wait"   --->   Operation 156 'wait' 'empty_39' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 157 [2/2] (1.26ns)   --->   "%call_ln48 = call void @load_input_Pipeline_mem_rd, i32 %gmem0, i62 %trunc_ln, i32 %size_read, i32 %in1_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 157 'call' 'call_ln48' <Predicate = true> <Delay = 1.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 74 <SV = 73> <Delay = 0.00>
+ST_74 : Operation 158 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size_c11, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 158 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 159 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 159 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 160 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 160 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 161 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 161 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 162 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 162 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 163 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_1, i32 0, i32 0, void @empty_3, i32 64, i32 0, void @empty_11, void @empty_10, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 163 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 164 [1/2] (0.00ns)   --->   "%call_ln48 = call void @load_input_Pipeline_mem_rd, i32 %gmem0, i62 %trunc_ln, i32 %size_read, i32 %in1_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48]   --->   Operation 164 'call' 'call_ln48' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_74 : Operation 165 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 165 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 1.217ns
+The critical path consists of the following:
+	wire read operation ('size_read', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46) on port 'size' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46) [7]  (0.000 ns)
+	fifo write operation ('write_ln46', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46) on port 'size_c11' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46) [9]  (1.217 ns)
+
+ <State 2>: 2.433ns
+The critical path consists of the following:
+	wire read operation ('in_read', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46) on port 'in_r' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:46) [8]  (0.000 ns)
+	'getelementptr' operation ('gmem0_addr', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [19]  (0.000 ns)
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 3>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 4>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 5>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 6>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 7>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 8>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 9>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 10>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 11>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 12>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 13>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 14>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 15>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 16>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 17>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 18>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 19>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 20>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 21>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 22>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 23>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 24>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 25>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 26>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 27>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 28>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 29>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 30>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 31>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 32>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 33>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 34>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 35>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 36>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 37>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 38>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 39>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 40>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 41>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 42>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 43>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 44>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 45>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 46>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 47>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 48>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 49>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 50>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 51>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 52>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 53>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 54>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 55>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 56>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 57>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 58>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 59>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 60>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 61>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 62>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 63>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 64>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 65>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 66>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 67>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 68>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 69>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 70>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 71>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 72>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_38', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) on port 'gmem0' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) [22]  (2.433 ns)
+
+ <State 73>: 1.267ns
+The critical path consists of the following:
+	'call' operation ('call_ln48', /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp:48) to 'load_input_Pipeline_mem_rd' [24]  (1.267 ns)
+
+ <State 74>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

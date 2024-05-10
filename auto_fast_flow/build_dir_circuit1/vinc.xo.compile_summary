@@ -1,0 +1,245 @@
+<ENTRY>
+{
+ "thisFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vinc.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May  7 14:22:52 2024",
+ "timestampMillis": "1715084572081",
+ "buildStep": {
+  "cmdId": "b585d375-7d39-46c7-87ab-0664c26e1fa2",
+  "name": "v++",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c --save-temps -t hw --platform /opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm -k vinc --temp_dir . --config ./build_dir_circuit1/vinc.cfg -I../kernels_src/vinc -obuild_dir_circuit1/vinc.xo ../kernels_src/vinc/vinc.cpp ",
+  "args": [
+   "-c",
+   "--save-temps",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+   "-k",
+   "vinc",
+   "--temp_dir",
+   ".",
+   "--config",
+   "./build_dir_circuit1/vinc.cfg",
+   "-I../kernels_src/vinc",
+   "-obuild_dir_circuit1/vinc.xo",
+   "../kernels_src/vinc/vinc.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vinc.cfg",
+    "content": "[connectivity]\nnk=vinc:4\nsp=vinc_1.in1:HBM[12]\nsp=vinc_1.out:HBM[13]\nsp=vinc_2.in1:HBM[14]\nsp=vinc_2.out:HBM[15]\nsp=vinc_3.in1:HBM[16]\nsp=vinc_3.out:HBM[17]\nsp=vinc_4.in1:HBM[18]\nsp=vinc_4.out:HBM[19]\n"
+   }
+  ],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 14:22:52 2024",
+ "timestampMillis": "1715084572081",
+ "status": {
+  "cmdId": "b585d375-7d39-46c7-87ab-0664c26e1fa2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue May  7 14:22:56 2024",
+ "timestampMillis": "1715084576853",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "vinc",
+     "file": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit1/vinc.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/rourab/Auto_FastFlow_fpga/kernels_src/vinc/vinc.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.1. SW Build 3860322 on 2023-05-04-06:32:48"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 14:22:56 2024",
+ "timestampMillis": "1715084576855",
+ "buildStep": {
+  "cmdId": "e75ed2e0-faa5-465a-b082-8196cbd06e25",
+  "name": "vitis_hls",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc/vinc.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc/vinc.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 14:22:56 2024",
+ "timestampMillis": "1715084576856",
+ "status": {
+  "cmdId": "e75ed2e0-faa5-465a-b082-8196cbd06e25",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624581",
+ "status": {
+  "cmdId": "e75ed2e0-faa5-465a-b082-8196cbd06e25",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624609",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc/vinc/solution/.autopilot/db/vinc.design.xml",
+  "name": "vinc",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624610",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc/vinc/solution/.autopilot/db/.message_syn.xml",
+  "name": "vinc",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624611",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/vinc/hls_reports/vinc_csynth.rpt",
+  "name": "vinc",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624612",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc/vinc/solution/syn/report/vinc_csynth.xml",
+  "name": "vinc",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624652",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/vinc/system_estimate_vinc.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624733",
+ "status": {
+  "cmdId": "b585d375-7d39-46c7-87ab-0664c26e1fa2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624824",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/reports/vinc/v++_compile_vinc_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 14:23:44 2024",
+ "timestampMillis": "1715084624825",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/v++_compile_vinc_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

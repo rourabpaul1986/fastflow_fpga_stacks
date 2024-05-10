@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: vinc
+Log file: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vinc/vinc/vitis_hls.log

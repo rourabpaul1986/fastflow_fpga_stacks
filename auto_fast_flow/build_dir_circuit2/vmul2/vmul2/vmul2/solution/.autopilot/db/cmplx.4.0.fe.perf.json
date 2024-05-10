@@ -1,0 +1,62 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "4 3 1 2",
+    "file": "vmul2.cpp",
+    "fileloc": 91,
+    "instructions": 32,
+    "name": "vmul2",
+    "total_instructions": 143
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "vmul2.cpp",
+    "fileloc": 54,
+    "instructions": 53,
+    "loads": {
+      "L": 8
+    },
+    "name": "compute_add",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 53
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "vmul2.cpp",
+    "fileloc": 71,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "store_result",
+    "total_instructions": 20
+  },
+  "3": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "vmul2.cpp",
+    "fileloc": 46,
+    "instructions": 19,
+    "name": "load_input",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 19
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "vmul2.cpp",
+    "fileloc": 46,
+    "instructions": 19,
+    "name": "load_input",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 19
+  }
+}

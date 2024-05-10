@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue May  7 17:58:48 2024
+# Process ID: 2117403
+# Current directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/impl/ip/vivado.log
+# Journal file: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/impl/ip/vivado.jou
+# Running On: u50, OS: Linux, CPU Frequency: 1200.000 MHz, CPU Physical cores: 20, Host memory: 135057 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2027.270 ; gain = 115.023 ; free physical = 95010 ; free virtual = 116215
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+Running package_xo -xo_path /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/impl/export.xo -kernel_name vadd2 -kernel_xml /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/impl/ip/../kernel/kernel.xml -kernel_files /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp -ip_directory /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/impl/ip/ip_unzip_dir -design_xml /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/.autopilot/db/vadd2.design.xml -debug_directory /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/.debug -hls_directory /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Tue May  7 17:59:04 2024...

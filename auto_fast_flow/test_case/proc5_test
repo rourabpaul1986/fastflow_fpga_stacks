@@ -1,0 +1,176 @@
+g++ -g -std=c++14 -I/tools/Xilinx/Vivado/2023.1/include -I/opt/xilinx/xrt/include/ -I .. -I ../fpga -O3 -L/opt/xilinx/xrt/lib/  -pthread -lrt -lstdc++ -I ~/fastflow -DTRACE_FASTFLOW -o host host.cpp /usr/lib/x86_64-linux-gnu/libOpenCL.so -I. 
+./host ../kernels/vadd4_vinc4_vmul4.xclbin  0 8 4		
+Executing  with ../kernels/vadd4_vinc4_vmul4.xclbin
+Task (0 KB, 0 KB) -> (0 KB)
+
+  chain = 0
+      n = 8(Stream Size )
+      m = 4(No. of Stream)
+
+Loading ../kernels/vadd4_vinc4_vmul4.xclbin bitstream in device id : 0
+
+Loading ../kernels/vadd4_vinc4_vmul4.xclbin bitstream in device id : 1
+
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+Result : 0 loop :0
+Result : 2 loop :1
+Result : 4 loop :2
+Result : 6 loop :3
+Result : 8 loop :4
+Result : 10 loop :5
+Result : 12 loop :6
+Result : 14 loop :7
+
+ 
+  Time : 127 ms
+Result : 3 loop :0
+Result : 4 loop :1
+Result : 7 loop :2
+Result : 12 loop :3
+Result : 19 loop :4
+Result : 28 loop :5
+Result : 39 loop :6
+Result : 52 loop :7
+
+ 
+Result : 3 loop :0
+Result : 7 loop :1
+Result : 11 loop :2
+Result : 15 loop :3
+Result : 19 loop :4
+Result : 23 loop :5
+Result : 27 loop :6
+Result : 31 loop :7
+
+ 
+Result : 3 loop :0
+Result : 4 loop :1
+Result : 7 loop :2
+Result : 12 loop :3
+Result : 19 loop :4
+Result : 28 loop :5
+Result : 39 loop :6
+Result : 52 loop :7
+
+ 
+Result : 3 loop :0
+Result : 7 loop :1
+Result : 11 loop :2
+Result : 15 loop :3
+Result : 19 loop :4
+Result : 23 loop :5
+Result : 27 loop :6
+Result : 31 loop :7
+
+ 
+Result : 3 loop :0
+Result : 4 loop :1
+Result : 7 loop :2
+Result : 12 loop :3
+Result : 19 loop :4
+Result : 28 loop :5
+Result : 39 loop :6
+Result : 52 loop :7
+
+ 
+Result : 3 loop :0
+Result : 7 loop :1
+Result : 11 loop :2
+Result : 15 loop :3
+Result : 19 loop :4
+Result : 23 loop :5
+Result : 27 loop :6
+Result : 31 loop :7
+
+ 
+Result : 3 loop :0
+Result : 4 loop :1
+Result : 7 loop :2
+Result : 12 loop :3
+Result : 19 loop :4
+Result : 28 loop :5
+Result : 39 loop :6
+Result : 52 loop :7
+
+ 
+Result : 3 loop :0
+Result : 7 loop :1
+Result : 11 loop :2
+Result : 15 loop :3
+Result : 19 loop :4
+Result : 23 loop :5
+Result : 27 loop :6
+Result : 31 loop :7
+
+ 
+  Time : 751 ms
+**************************************************************
+**Rules Check of Task Placement in input_file/proc_flow5.csv**
+**Rules Check of Task Placement in input_file/circuit.csv**
+**************************************************************
+Empty Line Not found in input_file/circuit.csv
+Empty Line Not found in input_file/proc_flow5.csv
+Arm length of workers is OK
+unique FPGAs 2
+Available FPGAs are suffcient to place
+***********************************************
+Required FPGA(s) to map given kernels are : 2
+int input_l_vadd=2;
+int output_l_vadd=1;
+int input_l_vinc=1;
+int output_l_vinc=1;
+int input_l_vmul=2;
+int output_l_vmul=1;
+
+***********************************************
+***********************************************
+circuits available in xclbin are ['"vadd"', '"vinc"', '"vmul"']
+***********************************************
+Text has been written to ../fpga/param.h
+-------------start---------------------
+(' 0', ' 1', 1)
+(' 2', ' 7', 1)
+[' 0', ' 2', ' vmul_1', ' 3', ' 0', ' 3', ' vinc_1', ' 4', ' 0', ' 4', ' vinc_2', ' 5', ' 0', ' 5', ' vinc_3', ' 7']
+5
+[' 0', ' 2', ' vmul_1', ' 3']
+[' 0', ' 3', ' vinc_1', ' 4', ' 0', ' 4', ' vinc_2', ' 5', ' 0', ' 5', ' vinc_3', ' 7']
+Last line deleted.
+src  2
+dst  7
+----------------------------------
+The number of farms in y arm is : 2
+emitter, collector, #worker
+(' 2', ' 3', 2)
+(' 3', ' 7', 1)
+----------------------------------
+----------------------------------
+0.0013511180877685547

@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_inc_Pipeline_execute'
+================================================================
+* Date:           Tue May  7 14:23:19 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        vinc
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.097 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     4099|     4099|  13.662 us|  13.662 us|  4099|  4099|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- execute  |     4097|     4097|         3|          1|          1|  4096|       yes|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|     120|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|        -|       -|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|      54|    -|
+|Register             |        -|     -|       68|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|       68|     174|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |i_1_fu_81_p2               |         +|   0|  0|  38|          31|           1|
+    |out_stream_din             |         +|   0|  0|  39|          32|           1|
+    |icmp_ln54_fu_75_p2         |      icmp|   0|  0|  39|          32|          32|
+    |ap_block_pp0_stage0_01001  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 120|          97|          37|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_load  |   9|          2|   31|         62|
+    |i_fu_40                  |   9|          2|   31|         62|
+    |in_stream_blk_n          |   9|          2|    1|          2|
+    |out_stream_blk_n         |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   66|        132|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |i_fu_40                           |  31|   0|   31|          0|
+    |in_stream_read_reg_109            |  32|   0|   32|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             |  68|   0|   68|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
++---------------------------+-----+-----+------------+------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  compute_inc_Pipeline_execute|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  compute_inc_Pipeline_execute|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  compute_inc_Pipeline_execute|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  compute_inc_Pipeline_execute|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  compute_inc_Pipeline_execute|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  compute_inc_Pipeline_execute|  return value|
+|in_stream_dout             |   in|   32|     ap_fifo|                     in_stream|       pointer|
+|in_stream_num_data_valid   |   in|    2|     ap_fifo|                     in_stream|       pointer|
+|in_stream_fifo_cap         |   in|    2|     ap_fifo|                     in_stream|       pointer|
+|in_stream_empty_n          |   in|    1|     ap_fifo|                     in_stream|       pointer|
+|in_stream_read             |  out|    1|     ap_fifo|                     in_stream|       pointer|
+|out_stream_din             |  out|   32|     ap_fifo|                    out_stream|       pointer|
+|out_stream_num_data_valid  |   in|    2|     ap_fifo|                    out_stream|       pointer|
+|out_stream_fifo_cap        |   in|    2|     ap_fifo|                    out_stream|       pointer|
+|out_stream_full_n          |   in|    1|     ap_fifo|                    out_stream|       pointer|
+|out_stream_write           |  out|    1|     ap_fifo|                    out_stream|       pointer|
+|size_load                  |   in|   32|     ap_none|                     size_load|        scalar|
++---------------------------+-----+-----+------------+------------------------------+--------------+
+

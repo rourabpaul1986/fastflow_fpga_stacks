@@ -1,0 +1,25 @@
+/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd/vadd.cpp:49:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=load_input_XLX_SEP_ PragmaOptions=min = c_size max = c_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min = c_size max = c_size
+        ^
+/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd/vadd.cpp:62:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_add_XLX_SEP_ PragmaOptions=min = c_size max = c_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min = c_size max = c_size
+        ^
+/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd/vadd.cpp:70:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=store_result_XLX_SEP_ PragmaOptions=min = c_size max = c_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min = c_size max = c_size
+        ^
+/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vadd/vadd/vadd.tcl:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=vadd_XLX_SEP_ PragmaOptions=name=vadd_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=vadd
+        ^
+/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd/vadd.cpp:88:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vadd_XLX_SEP_ PragmaOptions=m_axi port = in1 bundle = gmem0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port = in1 bundle = gmem0
+        ^
+/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd/vadd.cpp:89:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vadd_XLX_SEP_ PragmaOptions=m_axi port = in2 bundle = gmem1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port = in2 bundle = gmem1
+        ^
+/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd/vadd.cpp:90:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vadd_XLX_SEP_ PragmaOptions=m_axi port = out bundle = gmem0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port = out bundle = gmem0
+        ^
+/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd/vadd.cpp:96:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=vadd_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS dataflow
+        ^
+8 warnings generated.

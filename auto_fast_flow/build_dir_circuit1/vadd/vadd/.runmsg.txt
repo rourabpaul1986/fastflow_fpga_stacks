@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: vadd
+Log file: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vadd/vadd/vitis_hls.log

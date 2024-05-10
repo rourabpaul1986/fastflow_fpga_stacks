@@ -1,0 +1,5 @@
+fpga, src, krnl, dst
+0, 0, vadd_1, 1, 0, 1, vmul_1, 2, 0, 2, vinc_1, 3
+0, 0, vadd_2, 4, 0, 4, vmul_2, 5, 0, 5, vinc_2, 3
+0, 0, vadd_3, 6, 0, 6, vmul_3, 7, 0, 7, vinc_3, 3
+0, 0, vadd_4, 8, 0, 8, vmul_4, 9, 0, 9, vinc_4, 3

@@ -1,0 +1,67 @@
+<ENTRY>
+{
+ "thisFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/input_file/circuit2.csv.link.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri May  3 13:57:08 2024",
+ "timestampMillis": "1714737428398",
+ "buildStep": {
+  "cmdId": "50b187f8-d61c-4f85-827c-4ac3ceb83f96",
+  "name": "v++",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l --save-temps -t hw --platform /opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm --temp_dir . --config ../kernels_test/vadd2.cfg --config ../kernels_test/vinc2.cfg --config ../kernels_test/vmul2.cfg -o./input_file/circuit2.csv.link.xclbin ../kernels_test/vadd2.xo ../kernels_test/vinc2.xo ../kernels_test/vmul2.xo ",
+  "args": [
+   "-l",
+   "--save-temps",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+   "--temp_dir",
+   ".",
+   "--config",
+   "../kernels_test/vadd2.cfg",
+   "--config",
+   "../kernels_test/vinc2.cfg",
+   "--config",
+   "../kernels_test/vmul2.cfg",
+   "-o./input_file/circuit2.csv.link.xclbin",
+   "../kernels_test/vadd2.xo",
+   "../kernels_test/vinc2.xo",
+   "../kernels_test/vmul2.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/kernels_test/vadd2.cfg",
+    "content": "[connectivity]\nnk=vadd2:4\nsp=vadd2_1.in1:HBM[0]\nsp=vadd2_1.in2:HBM[1]\nsp=vadd2_1.out:HBM[2]\nsp=vadd2_2.in1:HBM[3]\nsp=vadd2_2.in2:HBM[4]\nsp=vadd2_2.out:HBM[5]\nsp=vadd2_3.in1:HBM[6]\nsp=vadd2_3.in2:HBM[7]\nsp=vadd2_3.out:HBM[8]\nsp=vadd2_4.in1:HBM[9]\nsp=vadd2_4.in2:HBM[10]\nsp=vadd2_4.out:HBM[11]\n"
+   },
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/kernels_test/vinc2.cfg",
+    "content": "[connectivity]\nnk=vinc2:4\nsp=vinc2_1.in1:HBM[12]\nsp=vinc2_1.out:HBM[13]\nsp=vinc2_2.in1:HBM[14]\nsp=vinc2_2.out:HBM[15]\nsp=vinc2_3.in1:HBM[16]\nsp=vinc2_3.out:HBM[17]\nsp=vinc2_4.in1:HBM[18]\nsp=vinc2_4.out:HBM[19]\n"
+   },
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/kernels_test/vmul2.cfg",
+    "content": "[connectivity]\nnk=vmul2:4\nsp=vmul2_1.in1:HBM[20]\nsp=vmul2_1.in2:HBM[21]\nsp=vmul2_1.out:HBM[22]\nsp=vmul2_2.in1:HBM[23]\nsp=vmul2_2.in2:HBM[24]\nsp=vmul2_2.out:HBM[25]\nsp=vmul2_3.in1:HBM[26]\nsp=vmul2_3.in2:HBM[27]\nsp=vmul2_3.out:HBM[28]\nsp=vmul2_4.in1:HBM[29]\nsp=vmul2_4.in2:HBM[30]\nsp=vmul2_4.out:HBM[31]\n"
+   }
+  ],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri May  3 13:57:08 2024",
+ "timestampMillis": "1714737428398",
+ "status": {
+  "cmdId": "50b187f8-d61c-4f85-827c-4ac3ceb83f96",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>

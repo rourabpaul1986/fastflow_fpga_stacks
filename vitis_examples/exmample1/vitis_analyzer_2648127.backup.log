@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vitis Analyzer v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# 
+# 
+# Start of session at: Wed Apr  3 14:15:36 2024
+# Process ID: 2648127
+# Current directory: /home/rourab/Auto_FastFlow_fpga/vitis_examples/exmample1
+# Command line: vitis_analyzer xrt.run_summary
+# Log file: /home/rourab/Auto_FastFlow_fpga/vitis_examples/exmample1/vitis_analyzer.log
+# Journal file: /home/rourab/Auto_FastFlow_fpga/vitis_examples/exmample1/vitis_analyzer.jou
+# Running On: u50, OS: Linux, CPU Frequency: 1222.699 MHz, CPU Physical cores: 20, Host memory: 135057 MB
+#-----------------------------------------------------------
+start_gui
+create_project dummy
+exit
+INFO: [Common 17-206] Exiting vitis_analyzer at Wed Apr  3 14:17:06 2024...

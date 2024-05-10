@@ -1,0 +1,31 @@
+<design_size title="Design Size Report">
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="6" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Performance/Pipeline" col5="Optimizations"/>
+            <rows>
+                <row id="0" col0="vadd2" col1="vadd2.cpp:92" col2="203" col3="128" col4="91" col5="143">
+                    <row id="3" col0="load_input" col1="vadd2.cpp:46" col2="38" col2_disp=" 38 (2 calls)" col3="34" col3_disp=" 34 (2 calls)" col4="28" col4_disp="28 (2 calls)" col5="38" col5_disp=" 38 (2 calls)"/>
+                    <row id="1" col0="compute_add" col1="vadd2.cpp:54" col2="90" col3="34" col4="28" col5="53"/>
+                    <row id="2" col0="store_result" col1="vadd2.cpp:72" col2="26" col3="17" col4="14" col5="20"/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Description of Compilation Phases">
+        <table>
+            <keys size="2">Compilation Phase, Description</keys>
+            <column name="Compile/Link">All functions are compiled and linked into a single design</column>
+            <column name="Unroll/Inline">After user unroll and inline pragmas are applied</column>
+            <column name="Performance/Pipeline">After performance and pipeline pragmas are applied</column>
+            <column name="Optimizations">After high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

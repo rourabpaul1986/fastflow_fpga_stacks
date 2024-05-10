@@ -1,0 +1,42 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_input" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size max = c_size" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size/2 max = c_size/2" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:75:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_result" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size max = c_size" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2/vadd2/vadd2.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="vadd2" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=vadd2" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:93:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vadd2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = in1 bundle = gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vadd2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = in2 bundle = gmem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:95:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vadd2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = out bundle = gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:101:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vadd2" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:92:0" msg_body="A depth specification is required for MAXI interface port 'in1' for cosimulation.">
+        <args Name="in1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:92:0" msg_body="A depth specification is required for MAXI interface port 'in2' for cosimulation.">
+        <args Name="in2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:92:0" msg_body="A depth specification is required for MAXI interface port 'out' for cosimulation.">
+        <args Name="out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:57:0" msg_body="Unrolling loop 'execute' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61:1) in function 'compute_add' partially with a factor of 2">
+        <args Factor="2" LoopLoc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61:1" LoopName="execute"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

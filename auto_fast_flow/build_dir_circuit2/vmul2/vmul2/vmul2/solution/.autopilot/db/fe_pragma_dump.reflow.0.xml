@@ -1,0 +1,15 @@
+<pragmas>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="49" pragmaType="loop_tripcount" parentfunction="load_input" min="4096" max="4096" avg="4096"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="63" pragmaType="unroll" parentfunction="compute_add" factor="2" skip_exit_check="0"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="62" pragmaType="loop_tripcount" parentfunction="compute_add" min="2048" max="2048" avg="2048"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="74" pragmaType="loop_tripcount" parentfunction="store_result" min="4096" max="4096" avg="4096"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 0>::operator<<(unsigned int const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="100" pragmaType="dataflow" parentfunction="vmul2" disable_start_propagation="0"/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="92" pragmaType="interface" parentfunction="vmul2" mode="m_axi" port="in1" bundle="gmem0" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="93" pragmaType="interface" parentfunction="vmul2" mode="m_axi" port="in2" bundle="gmem1" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp" line="94" pragmaType="interface" parentfunction="vmul2" mode="m_axi" port="out" bundle="gmem0" offset="" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 0>::stream(char const*)" off="0" region="0" recursive="0"/>
+</pragmas>

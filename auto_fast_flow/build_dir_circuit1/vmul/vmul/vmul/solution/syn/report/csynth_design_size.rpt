@@ -1,0 +1,32 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Instructions per Function for each Compilation Phase
++-----------------+-------------+---------------+---------------+----------------------+---------------+
+| Function        | Location    | Compile/Link  | Unroll/Inline | Performance/Pipeline | Optimizations |
++-----------------+-------------+---------------+---------------+----------------------+---------------+
+| + vmul          | vmul.cpp:87 | 163           | 111           | 75                   | 109           |
+|    load_input   | vmul.cpp:46 |  38 (2 calls) |  34 (2 calls) | 28 (2 calls)         |  38 (2 calls) |
+|    compute_add  | vmul.cpp:54 |  50           |  17           | 12                   |  19           |
+|    store_result | vmul.cpp:67 |  26           |  17           | 14                   |  20           |
++-----------------+-------------+---------------+---------------+----------------------+---------------+
+
+* Description of Compilation Phases
++----------------------+------------------------------------------------------------+
+| Compilation Phase    | Description                                                |
++----------------------+------------------------------------------------------------+
+| Compile/Link         | All functions are compiled and linked into a single design |
+| Unroll/Inline        | After user unroll and inline pragmas are applied           |
+| Performance/Pipeline | After performance and pipeline pragmas are applied         |
+| Optimizations        | After high level synthesis optimizations                   |
++----------------------+------------------------------------------------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

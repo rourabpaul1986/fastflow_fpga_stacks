@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_input" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size max = c_size" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_add" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size max = c_size" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:70:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_result" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size max = c_size" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="vmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=vmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = in1 bundle = gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = in2 bundle = gmem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = out bundle = gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="vmul" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:87:0" msg_body="A depth specification is required for MAXI interface port 'in1' for cosimulation.">
+        <args Name="in1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:87:0" msg_body="A depth specification is required for MAXI interface port 'in2' for cosimulation.">
+        <args Name="in2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp:87:0" msg_body="A depth specification is required for MAXI interface port 'out' for cosimulation.">
+        <args Name="out"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

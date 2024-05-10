@@ -1,0 +1,1381 @@
+<ENTRY>
+{
+ "thisFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/circuit2.link.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May  7 18:01:35 2024",
+ "timestampMillis": "1715097695536",
+ "buildStep": {
+  "cmdId": "f5f7aede-a65b-4b19-9cd8-4118341113d2",
+  "name": "v++",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l --save-temps -t hw --platform /opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm --temp_dir ./build_dir_circuit2 --config ./build_dir_circuit2/vadd2.cfg --config ./build_dir_circuit2/vinc2.cfg --config ./build_dir_circuit2/vmul2.cfg -o./build_dir_circuit2/circuit2.link.xclbin build_dir_circuit2/vadd2.xo build_dir_circuit2/vinc2.xo build_dir_circuit2/vmul2.xo ",
+  "args": [
+   "-l",
+   "--save-temps",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+   "--temp_dir",
+   "./build_dir_circuit2",
+   "--config",
+   "./build_dir_circuit2/vadd2.cfg",
+   "--config",
+   "./build_dir_circuit2/vinc2.cfg",
+   "--config",
+   "./build_dir_circuit2/vmul2.cfg",
+   "-o./build_dir_circuit2/circuit2.link.xclbin",
+   "build_dir_circuit2/vadd2.xo",
+   "build_dir_circuit2/vinc2.xo",
+   "build_dir_circuit2/vmul2.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2.cfg",
+    "content": "[connectivity]\nnk=vadd2:4\nsp=vadd2_1.in1:HBM[0]\nsp=vadd2_1.in2:HBM[1]\nsp=vadd2_1.out:HBM[2]\nsp=vadd2_2.in1:HBM[3]\nsp=vadd2_2.in2:HBM[4]\nsp=vadd2_2.out:HBM[5]\nsp=vadd2_3.in1:HBM[6]\nsp=vadd2_3.in2:HBM[7]\nsp=vadd2_3.out:HBM[8]\nsp=vadd2_4.in1:HBM[9]\nsp=vadd2_4.in2:HBM[10]\nsp=vadd2_4.out:HBM[11]\n"
+   },
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vinc2.cfg",
+    "content": "[connectivity]\nnk=vinc2:4\nsp=vinc2_1.in1:HBM[12]\nsp=vinc2_1.out:HBM[13]\nsp=vinc2_2.in1:HBM[14]\nsp=vinc2_2.out:HBM[15]\nsp=vinc2_3.in1:HBM[16]\nsp=vinc2_3.out:HBM[17]\nsp=vinc2_4.in1:HBM[18]\nsp=vinc2_4.out:HBM[19]\n"
+   },
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2.cfg",
+    "content": "[connectivity]\nnk=vmul2:4\nsp=vmul2_1.in1:HBM[20]\nsp=vmul2_1.in2:HBM[21]\nsp=vmul2_1.out:HBM[22]\nsp=vmul2_2.in1:HBM[23]\nsp=vmul2_2.in2:HBM[24]\nsp=vmul2_2.out:HBM[25]\nsp=vmul2_3.in1:HBM[26]\nsp=vmul2_3.in2:HBM[27]\nsp=vmul2_3.out:HBM[28]\nsp=vmul2_4.in1:HBM[29]\nsp=vmul2_4.in2:HBM[30]\nsp=vmul2_4.out:HBM[31]\n"
+   }
+  ],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:01:35 2024",
+ "timestampMillis": "1715097695536",
+ "status": {
+  "cmdId": "f5f7aede-a65b-4b19-9cd8-4118341113d2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue May  7 18:01:40 2024",
+ "timestampMillis": "1715097700747",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "circuit2.link",
+    "file": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/circuit2.link.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "vadd2",
+     "file": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/vadd2/vadd2/cpu_sources/vadd2.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "vadd2_1",
+     "vadd2_2",
+     "vadd2_3",
+     "vadd2_4"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "vinc2",
+     "file": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vinc2.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/vinc2/vinc2/cpu_sources/vinc2.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "vinc2_1",
+     "vinc2_2",
+     "vinc2_3",
+     "vinc2_4"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "vmul2",
+     "file": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/vmul2/vmul2/cpu_sources/vmul2.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "vmul2_1",
+     "vmul2_2",
+     "vmul2_3",
+     "vmul2_4"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.1. SW Build 3860322 on 2023-05-04-06:32:48"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 18:01:40 2024",
+ "timestampMillis": "1715097700988",
+ "buildStep": {
+  "cmdId": "b572ad88-9be6-4d6d-9d4f-fa69ae1f2bac",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2.xo --xo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vinc2.xo --xo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2.xo -keep --config /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm --target hw --output_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int --temp_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vadd2.xo",
+   "--xo",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vinc2.xo",
+   "--xo",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2.xo",
+   "-keep",
+   "--config",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int",
+   "--temp_dir",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/syslinkConfig.ini",
+    "content": "nk=vadd2:4\nnk=vinc2:4\nnk=vmul2:4\nsp=vadd2_1.in1:HBM[0]\nsp=vadd2_1.in2:HBM[1]\nsp=vadd2_1.out:HBM[2]\nsp=vadd2_2.in1:HBM[3]\nsp=vadd2_2.in2:HBM[4]\nsp=vadd2_2.out:HBM[5]\nsp=vadd2_3.in1:HBM[6]\nsp=vadd2_3.in2:HBM[7]\nsp=vadd2_3.out:HBM[8]\nsp=vadd2_4.in1:HBM[9]\nsp=vadd2_4.in2:HBM[10]\nsp=vadd2_4.out:HBM[11]\nsp=vinc2_1.in1:HBM[12]\nsp=vinc2_1.out:HBM[13]\nsp=vinc2_2.in1:HBM[14]\nsp=vinc2_2.out:HBM[15]\nsp=vinc2_3.in1:HBM[16]\nsp=vinc2_3.out:HBM[17]\nsp=vinc2_4.in1:HBM[18]\nsp=vinc2_4.out:HBM[19]\nsp=vmul2_1.in1:HBM[20]\nsp=vmul2_1.in2:HBM[21]\nsp=vmul2_1.out:HBM[22]\nsp=vmul2_2.in1:HBM[23]\nsp=vmul2_2.in2:HBM[24]\nsp=vmul2_2.out:HBM[25]\nsp=vmul2_3.in1:HBM[26]\nsp=vmul2_3.in2:HBM[27]\nsp=vmul2_3.out:HBM[28]\nsp=vmul2_4.in1:HBM[29]\nsp=vmul2_4.in2:HBM[30]\nsp=vmul2_4.out:HBM[31]\n\n"
+   }
+  ],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:01:40 2024",
+ "timestampMillis": "1715097700989",
+ "status": {
+  "cmdId": "b572ad88-9be6-4d6d-9d4f-fa69ae1f2bac",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:04 2024",
+ "timestampMillis": "1715097724536",
+ "status": {
+  "cmdId": "b572ad88-9be6-4d6d-9d4f-fa69ae1f2bac",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 18:02:04 2024",
+ "timestampMillis": "1715097724540",
+ "buildStep": {
+  "cmdId": "3ea03234-9f55-4eff-8d62-34bfe99e85a9",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/sdsl.dat -rtd /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/cf2sw.rtd -nofilter /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/cf2sw_full.rtd -xclbin /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xclbin_orig.xml -o /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/sdsl.dat",
+   "-rtd",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:04 2024",
+ "timestampMillis": "1715097724540",
+ "status": {
+  "cmdId": "3ea03234-9f55-4eff-8d62-34bfe99e85a9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:13 2024",
+ "timestampMillis": "1715097733389",
+ "status": {
+  "cmdId": "3ea03234-9f55-4eff-8d62-34bfe99e85a9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 18:02:13 2024",
+ "timestampMillis": "1715097733391",
+ "buildStep": {
+  "cmdId": "b6906a86-930f-4123-a4e7-3baaa7ce8856",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:13 2024",
+ "timestampMillis": "1715097733392",
+ "status": {
+  "cmdId": "b6906a86-930f-4123-a4e7-3baaa7ce8856",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:02:13 2024",
+ "timestampMillis": "1715097733708",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:13 2024",
+ "timestampMillis": "1715097733708",
+ "status": {
+  "cmdId": "b6906a86-930f-4123-a4e7-3baaa7ce8856",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 18:02:13 2024",
+ "timestampMillis": "1715097733711",
+ "buildStep": {
+  "cmdId": "215faff8-d0c0-4df6-afd2-2fe194e490a3",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f /opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm -s --remote_ip_cache /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/.ipcache --output_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int --log_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/logs/link --report_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link --config /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/vplConfig.ini -k /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link --no-info --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vmul2_1_0 --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vinc2_1_0 --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vadd2_1_0 --messageDb /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/run_link/vpl.pb /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "/opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+   "-s",
+   "--remote_ip_cache",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/.ipcache",
+   "--output_dir",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int",
+   "--log_dir",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/logs/link",
+   "--report_dir",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link",
+   "--config",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/vplConfig.ini",
+   "-k",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link",
+   "--no-info",
+   "--iprepo",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vmul2_1_0",
+   "--iprepo",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vinc2_1_0",
+   "--iprepo",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vadd2_1_0",
+   "--messageDb",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/run_link/vpl.pb",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/rourab/Auto_FastFlow_fpga/auto_fast_flow\nmisc=BinaryName=circuit2.link\n\n[connectivity]\nnk=vadd2:4:vadd2_1,vadd2_2,vadd2_3,vadd2_4\nnk=vinc2:4:vinc2_1,vinc2_2,vinc2_3,vinc2_4\nnk=vmul2:4:vmul2_1,vmul2_2,vmul2_3,vmul2_4\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:13 2024",
+ "timestampMillis": "1715097733711",
+ "status": {
+  "cmdId": "215faff8-d0c0-4df6-afd2-2fe194e490a3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May  7 18:02:15 2024",
+ "timestampMillis": "1715097735749",
+ "buildStep": {
+  "cmdId": "65731df6-ad70-42e5-9f0d-437f459d101a",
+  "name": "vpl",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/vpl -t hw -f /opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm -s --remote_ip_cache /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/.ipcache --output_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int --log_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/logs/link --report_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link --config /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/vplConfig.ini -k /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link --no-info --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vmul2_1_0 --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vinc2_1_0 --iprepo /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xo/ip_repo/xilinx_com_hls_vadd2_1_0 --messageDb /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/run_link/vpl.pb /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:15 2024",
+ "timestampMillis": "1715097735749",
+ "status": {
+  "cmdId": "65731df6-ad70-42e5-9f0d-437f459d101a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Tue May  7 18:02:21 2024",
+ "timestampMillis": "1715097741183",
+ "vivadoProject": {
+  "openDir": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 18:02:21 2024",
+ "timestampMillis": "1715097741184",
+ "buildStep": {
+  "cmdId": "9ecbcce1-6b9d-4c8f-bae2-6cab44aa1b12",
+  "name": "vivado",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:02:21 2024",
+ "timestampMillis": "1715097741184",
+ "status": {
+  "cmdId": "9ecbcce1-6b9d-4c8f-bae2-6cab44aa1b12",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:03:40 2024",
+ "timestampMillis": "1715097820859",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May  7 18:13:12 2024",
+ "timestampMillis": "1715098392174",
+ "buildStep": {
+  "cmdId": "41787aec-4227-48fa-be2b-c035256465d5",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:13:12 2024",
+ "timestampMillis": "1715098392174",
+ "status": {
+  "cmdId": "41787aec-4227-48fa-be2b-c035256465d5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May  7 18:13:12 2024",
+ "timestampMillis": "1715098392175",
+ "buildStep": {
+  "cmdId": "ea2a37c7-73c8-4028-8456-984df09a873d",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:13:12 2024",
+ "timestampMillis": "1715098392175",
+ "status": {
+  "cmdId": "ea2a37c7-73c8-4028-8456-984df09a873d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 19:56:33 2024",
+ "timestampMillis": "1715104593501",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 19:59:02 2024",
+ "timestampMillis": "1715104742810",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 19:59:02 2024",
+ "timestampMillis": "1715104742812",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:02:17 2024",
+ "timestampMillis": "1715104937558",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:02:17 2024",
+ "timestampMillis": "1715104937563",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237033",
+ "status": {
+  "cmdId": "9ecbcce1-6b9d-4c8f-bae2-6cab44aa1b12",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237095",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237096",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237096",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237097",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_full_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237097",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237098",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237098",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237099",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_full_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237100",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237100",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237101",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237101",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237102",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237102",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237103",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237103",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237106",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/syn/ulp_vadd2_2_0_synth_1_ulp_vadd2_2_0_utilization_synth.rpt",
+  "name": "vadd2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237107",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/syn/ulp_vmul2_3_0_synth_1_ulp_vmul2_3_0_utilization_synth.rpt",
+  "name": "vmul2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237108",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/syn/ulp_vinc2_1_0_synth_1_ulp_vinc2_1_0_utilization_synth.rpt",
+  "name": "vinc2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237108",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "ea2a37c7-73c8-4028-8456-984df09a873d"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237124",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "ea2a37c7-73c8-4028-8456-984df09a873d"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237138",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "ea2a37c7-73c8-4028-8456-984df09a873d"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237139",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "ea2a37c7-73c8-4028-8456-984df09a873d"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237163",
+ "status": {
+  "cmdId": "65731df6-ad70-42e5-9f0d-437f459d101a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237183",
+ "status": {
+  "cmdId": "215faff8-d0c0-4df6-afd2-2fe194e490a3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237186",
+ "buildStep": {
+  "cmdId": "27ba2138-c12c-4a1f-b5ac-f94beb3bf767",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237186",
+ "status": {
+  "cmdId": "27ba2138-c12c-4a1f-b5ac-f94beb3bf767",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237191",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237193",
+ "buildStep": {
+  "cmdId": "26f5476e-e2ca-434e-82f8-a73eed320643",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/address_map.xml -sdsl /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/sdsl.dat -xclbin /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xclbin_orig.xml -rtd /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.rtd -o /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.xml",
+  "args": [
+   "-a",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/address_map.xml",
+   "-sdsl",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.rtd",
+   "-o",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:23:57 2024",
+ "timestampMillis": "1715106237194",
+ "status": {
+  "cmdId": "26f5476e-e2ca-434e-82f8-a73eed320643",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245321",
+ "status": {
+  "cmdId": "26f5476e-e2ca-434e-82f8-a73eed320643",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245322",
+ "buildStep": {
+  "cmdId": "34e757c5-8dea-4ab3-b445-8220b4a426a3",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.rtd",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245323",
+ "status": {
+  "cmdId": "34e757c5-8dea-4ab3-b445-8220b4a426a3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245332",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245332",
+ "status": {
+  "cmdId": "34e757c5-8dea-4ab3-b445-8220b4a426a3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245333",
+ "buildStep": {
+  "cmdId": "d7b2de76-8932-45cd-b4d1-a90f40efa6ad",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245333",
+ "status": {
+  "cmdId": "d7b2de76-8932-45cd-b4d1-a90f40efa6ad",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245336",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245336",
+ "status": {
+  "cmdId": "d7b2de76-8932-45cd-b4d1-a90f40efa6ad",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245337",
+ "status": {
+  "cmdId": "27ba2138-c12c-4a1f-b5ac-f94beb3bf767",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245339",
+ "buildStep": {
+  "cmdId": "97f1f8ac-c920-46ac-8eec-914cb0330e22",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.rtd --append-section :JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link_xml.rtd --add-section BUILD_METADATA:JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.xml --add-section SYSTEM_METADATA:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_5_202210_1 --output /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit2/circuit2.link.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.rtd",
+   "--append-section",
+   ":JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/circuit2.link.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_5_202210_1",
+   "--output",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit2/circuit2.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245339",
+ "status": {
+  "cmdId": "97f1f8ac-c920-46ac-8eec-914cb0330e22",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245490",
+ "status": {
+  "cmdId": "97f1f8ac-c920-46ac-8eec-914cb0330e22",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245492",
+ "buildStep": {
+  "cmdId": "20ab9a43-81c9-47e1-a980-d7a6633f6410",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit2/circuit2.link.xclbin.info --input /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit2/circuit2.link.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit2/circuit2.link.xclbin.info",
+   "--input",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/./build_dir_circuit2/circuit2.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245492",
+ "status": {
+  "cmdId": "20ab9a43-81c9-47e1-a980-d7a6633f6410",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245950",
+ "status": {
+  "cmdId": "20ab9a43-81c9-47e1-a980-d7a6633f6410",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245953",
+ "buildStep": {
+  "cmdId": "c13e680c-9ba0-4152-961f-d585ba022ca2",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245953",
+ "status": {
+  "cmdId": "c13e680c-9ba0-4152-961f-d585ba022ca2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:05 2024",
+ "timestampMillis": "1715106245953",
+ "status": {
+  "cmdId": "c13e680c-9ba0-4152-961f-d585ba022ca2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:24:06 2024",
+ "timestampMillis": "1715106246067",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/system_estimate_circuit2.link.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:24:06 2024",
+ "timestampMillis": "1715106246072",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 20:24:06 2024",
+ "timestampMillis": "1715106246073",
+ "status": {
+  "cmdId": "f5f7aede-a65b-4b19-9cd8-4118341113d2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:24:06 2024",
+ "timestampMillis": "1715106246168",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/link/v++_link_circuit2.link_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 20:24:06 2024",
+ "timestampMillis": "1715106246168",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/v++_link_circuit2.link_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

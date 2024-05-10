@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_add_Pipeline_execute'
+================================================================
+* Date:           Tue May  7 17:58:37 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        vadd2
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.097 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     4101|     4101|  13.669 us|  13.669 us|  4101|  4101|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- execute  |     4099|     4099|         6|          4|          1|  1024|       yes|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 4, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.88>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 9 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_stream, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in2_stream, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_6, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%size_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size_load" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 13 'read' 'size_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.38ns)   --->   "%store_ln0 = store i31 0, i31 %i"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.0.i"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%i_3 = load i31 %i" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 16 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i_cast_i = zext i31 %i_3" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 17 'zext' 'i_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 18 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.88ns)   --->   "%icmp_ln61 = icmp_slt  i32 %i_cast_i, i32 %size_load_read" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 19 'icmp' 'icmp_ln61' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln61 = br i1 %icmp_ln61, void %for.inc.0.i.compute_add.exit_crit_edge.exitStub, void %for.inc.0.split.i" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 20 'br' 'br_ln61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln61_1)   --->   "%i_4 = or i31 %i_3, i31 2" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 21 'or' 'i_4' <Predicate = (icmp_ln61)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln61_1)   --->   "%zext_ln61 = zext i31 %i_4" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 22 'zext' 'zext_ln61' <Predicate = (icmp_ln61)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.88ns) (out node of the LUT)   --->   "%icmp_ln61_1 = icmp_slt  i32 %zext_ln61, i32 %size_load_read" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 23 'icmp' 'icmp_ln61_1' <Predicate = (icmp_ln61)> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln61 = br i1 %icmp_ln61_1, void %for.inc.0.i.compute_add.exit_crit_edge.exitStub, void %for.inc.1.i" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 24 'br' 'br_ln61' <Predicate = (icmp_ln61)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.09>
+ST_2 : Operation 25 [1/1] (1.21ns)   --->   "%in1_stream_read = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in1_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 25 'read' 'in1_stream_read' <Predicate = (icmp_ln61)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 26 [1/1] (1.21ns)   --->   "%in2_stream_read = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in2_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 26 'read' 'in2_stream_read' <Predicate = (icmp_ln61)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 27 [1/1] (0.88ns)   --->   "%add_ln65 = add i32 %in2_stream_read, i32 %in1_stream_read" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 27 'add' 'add_ln65' <Predicate = (icmp_ln61)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.21>
+ST_3 : Operation 28 [1/1] (1.21ns)   --->   "%write_ln65 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %out_stream, i32 %add_ln65" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 28 'write' 'write_ln65' <Predicate = (icmp_ln61)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 29 [1/1] (1.21ns)   --->   "%in1_stream_read_1 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in1_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 29 'read' 'in1_stream_read_1' <Predicate = (icmp_ln61)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 30 [1/1] (1.21ns)   --->   "%in2_stream_read_1 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in2_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 30 'read' 'in2_stream_read_1' <Predicate = (icmp_ln61)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 4 <SV = 3> <Delay = 2.09>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%speclooptripcount_ln62 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:62]   --->   Operation 31 'speclooptripcount' 'speclooptripcount_ln62' <Predicate = (icmp_ln61)> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%specloopname_ln61 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 32 'specloopname' 'specloopname_ln61' <Predicate = (icmp_ln61)> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.88ns)   --->   "%add_ln66 = add i32 %in2_stream_read_1, i32 %in1_stream_read_1" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 33 'add' 'add_ln66' <Predicate = (icmp_ln61)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 34 [1/1] (1.21ns)   --->   "%write_ln66 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %out_stream, i32 %add_ln66" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 34 'write' 'write_ln66' <Predicate = (icmp_ln61)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_4 : Operation 35 [1/1] (1.21ns)   --->   "%in1_stream_read_2 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in1_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 35 'read' 'in1_stream_read_2' <Predicate = (icmp_ln61 & icmp_ln61_1)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_4 : Operation 36 [1/1] (1.21ns)   --->   "%in2_stream_read_2 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in2_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 36 'read' 'in2_stream_read_2' <Predicate = (icmp_ln61 & icmp_ln61_1)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_4 : Operation 37 [1/1] (0.87ns)   --->   "%i_5 = add i31 %i_3, i31 4" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 37 'add' 'i_5' <Predicate = (icmp_ln61 & icmp_ln61_1)> <Delay = 0.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 38 [1/1] (0.38ns)   --->   "%store_ln61 = store i31 %i_5, i31 %i" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 38 'store' 'store_ln61' <Predicate = (icmp_ln61 & icmp_ln61_1)> <Delay = 0.38>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 46 'ret' 'ret_ln0' <Predicate = (!icmp_ln61_1) | (!icmp_ln61)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.09>
+ST_5 : Operation 39 [1/1] (0.88ns)   --->   "%add_ln65_1 = add i32 %in2_stream_read_2, i32 %in1_stream_read_2" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 39 'add' 'add_ln65_1' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 40 [1/1] (1.21ns)   --->   "%write_ln65 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %out_stream, i32 %add_ln65_1" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65]   --->   Operation 40 'write' 'write_ln65' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_5 : Operation 41 [1/1] (1.21ns)   --->   "%in1_stream_read_3 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in1_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 41 'read' 'in1_stream_read_3' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_5 : Operation 42 [1/1] (1.21ns)   --->   "%in2_stream_read_3 = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %in2_stream" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 42 'read' 'in2_stream_read_3' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 6 <SV = 5> <Delay = 2.09>
+ST_6 : Operation 43 [1/1] (0.88ns)   --->   "%add_ln66_1 = add i32 %in2_stream_read_3, i32 %in1_stream_read_3" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 43 'add' 'add_ln66_1' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 44 [1/1] (1.21ns)   --->   "%write_ln66 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %out_stream, i32 %add_ln66_1" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66]   --->   Operation 44 'write' 'write_ln66' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.39> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln61 = br void %for.inc.0.i" [/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61]   --->   Operation 45 'br' 'br_ln61' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 0.880ns
+The critical path consists of the following:
+	'alloca' operation ('i') [5]  (0.000 ns)
+	'load' operation ('i', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61) on local variable 'i' [13]  (0.000 ns)
+	'icmp' operation ('icmp_ln61', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:61) [16]  (0.880 ns)
+
+ <State 2>: 2.097ns
+The critical path consists of the following:
+	fifo read operation ('in1_stream_read', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) on port 'in1_stream' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) [21]  (1.217 ns)
+	'add' operation ('add_ln65', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) [23]  (0.880 ns)
+
+ <State 3>: 1.217ns
+The critical path consists of the following:
+	fifo write operation ('write_ln65', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) on port 'out_stream' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) [24]  (1.217 ns)
+
+ <State 4>: 2.097ns
+The critical path consists of the following:
+	'add' operation ('add_ln66', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66) [27]  (0.880 ns)
+	fifo write operation ('write_ln66', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66) on port 'out_stream' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66) [28]  (1.217 ns)
+
+ <State 5>: 2.097ns
+The critical path consists of the following:
+	'add' operation ('add_ln65_1', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) [36]  (0.880 ns)
+	fifo write operation ('write_ln65', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) on port 'out_stream' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:65) [37]  (1.217 ns)
+
+ <State 6>: 2.097ns
+The critical path consists of the following:
+	'add' operation ('add_ln66_1', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66) [40]  (0.880 ns)
+	fifo write operation ('write_ln66', /home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66) on port 'out_stream' (/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp:66) [41]  (1.217 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

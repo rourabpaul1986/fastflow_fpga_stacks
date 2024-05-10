@@ -1,0 +1,43 @@
+g++ -g -std=c++14 -I/tools/Xilinx/Vivado/2023.1/include -I/opt/xilinx/xrt/include/ -I .. -I ../fpga -O3 -L/opt/xilinx/xrt/lib/  -pthread -lrt -lstdc++ -I ~/fastflow -DTRACE_FASTFLOW -o host host.cpp /usr/lib/x86_64-linux-gnu/libOpenCL.so -I. 
+./host test_case/circuit1.xclbin  0 8 4	
+Executing  with test_case/circuit1.xclbin
+Task (0 KB, 0 KB) -> (0 KB)
+
+  chain = 0
+      n = 8(Stream Size )
+      m = 4(No. of Stream)
+
+Loading test_case/circuit1.xclbin bitstream in device id : 0
+
+10
+51
+172
+373
+654
+1015
+1456
+1977
+10
+51
+172
+373
+654
+1015
+1456
+1977
+10
+51
+172
+373
+654
+1015
+1456
+1977
+10
+51
+172
+373
+654
+1015
+1456
+1977

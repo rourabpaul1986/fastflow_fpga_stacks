@@ -1,0 +1,245 @@
+<ENTRY>
+{
+ "thisFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May  7 18:00:25 2024",
+ "timestampMillis": "1715097625599",
+ "buildStep": {
+  "cmdId": "2365c452-cf05-4306-b1a4-2299e9d9766c",
+  "name": "v++",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2/vmul2.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c --save-temps -t hw --platform /opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm -k vmul2 --temp_dir ./build_dir_circuit2 --config ./build_dir_circuit2/vmul2.cfg -I../kernels_src/vmul2 -obuild_dir_circuit2/vmul2.xo ../kernels_src/vmul2/vmul2.cpp ",
+  "args": [
+   "-c",
+   "--save-temps",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms//xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+   "-k",
+   "vmul2",
+   "--temp_dir",
+   "./build_dir_circuit2",
+   "--config",
+   "./build_dir_circuit2/vmul2.cfg",
+   "-I../kernels_src/vmul2",
+   "-obuild_dir_circuit2/vmul2.xo",
+   "../kernels_src/vmul2/vmul2.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2.cfg",
+    "content": "[connectivity]\nnk=vmul2:4\nsp=vmul2_1.in1:HBM[20]\nsp=vmul2_1.in2:HBM[21]\nsp=vmul2_1.out:HBM[22]\nsp=vmul2_2.in1:HBM[23]\nsp=vmul2_2.in2:HBM[24]\nsp=vmul2_2.out:HBM[25]\nsp=vmul2_3.in1:HBM[26]\nsp=vmul2_3.in2:HBM[27]\nsp=vmul2_3.out:HBM[28]\nsp=vmul2_4.in1:HBM[29]\nsp=vmul2_4.in2:HBM[30]\nsp=vmul2_4.out:HBM[31]\n"
+   }
+  ],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:00:25 2024",
+ "timestampMillis": "1715097625599",
+ "status": {
+  "cmdId": "2365c452-cf05-4306-b1a4-2299e9d9766c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue May  7 18:00:30 2024",
+ "timestampMillis": "1715097630403",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "vmul2",
+     "file": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/rourab/Auto_FastFlow_fpga/kernels_src/vmul2/vmul2.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.1. SW Build 3860322 on 2023-05-04-06:32:48"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May  7 18:00:30 2024",
+ "timestampMillis": "1715097630406",
+ "buildStep": {
+  "cmdId": "ff5c68c6-607b-4db5-9b9e-414f3c7c1378",
+  "name": "vitis_hls",
+  "logFile": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2/vmul2/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2/vmul2/vmul2.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2/vmul2/vmul2.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:00:30 2024",
+ "timestampMillis": "1715097630406",
+ "status": {
+  "cmdId": "ff5c68c6-607b-4db5-9b9e-414f3c7c1378",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683069",
+ "status": {
+  "cmdId": "ff5c68c6-607b-4db5-9b9e-414f3c7c1378",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683102",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2/vmul2/vmul2/solution/.autopilot/db/vmul2.design.xml",
+  "name": "vmul2",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683103",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2/vmul2/vmul2/solution/.autopilot/db/.message_syn.xml",
+  "name": "vmul2",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683104",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/vmul2/hls_reports/vmul2_csynth.rpt",
+  "name": "vmul2",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683105",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/vmul2/vmul2/vmul2/solution/syn/report/vmul2_csynth.xml",
+  "name": "vmul2",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683150",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/vmul2/system_estimate_vmul2.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683250",
+ "status": {
+  "cmdId": "2365c452-cf05-4306-b1a4-2299e9d9766c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683343",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/reports/vmul2/v++_compile_vmul2_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May  7 18:01:23 2024",
+ "timestampMillis": "1715097683343",
+ "report": {
+  "path": "/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/build_dir_circuit2/v++_compile_vmul2_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="vadd2" dir="">
+  <FileSets>
+    <FileSet Name="kernel_vadd2" Type="DesignSrcs">
+      <File Path="/home/rourab/Auto_FastFlow_fpga/kernels_src/vadd2/vadd2.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

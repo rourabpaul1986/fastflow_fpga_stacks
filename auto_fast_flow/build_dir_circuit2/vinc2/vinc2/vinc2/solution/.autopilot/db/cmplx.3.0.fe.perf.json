@@ -1,0 +1,38 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "3 2 1",
+    "file": "vinc2.cpp",
+    "fileloc": 84,
+    "instructions": 16,
+    "name": "vinc2",
+    "total_instructions": 68
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "vinc2.cpp",
+    "fileloc": 65,
+    "instructions": 14,
+    "name": "store_result",
+    "total_instructions": 14
+  },
+  "2": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "vinc2.cpp",
+    "fileloc": 50,
+    "instructions": 24,
+    "name": "compute_inc",
+    "total_instructions": 24
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "",
+    "file": "vinc2.cpp",
+    "fileloc": 42,
+    "instructions": 14,
+    "name": "load_input",
+    "total_instructions": 14
+  }
+}

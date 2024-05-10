@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="vadd" LaunchDir="/home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vadd/vadd" FlowId="Build_IP" FromStepId="vitis_hls" ToStepId="vitis_hls"/>
+</Runs>
+

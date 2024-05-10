@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue May  7 14:24:33 2024
+# Process ID: 1954669
+# Current directory: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/impl/ip/vivado.log
+# Journal file: /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/impl/ip/vivado.jou
+# Running On: u50, OS: Linux, CPU Frequency: 1200.000 MHz, CPU Physical cores: 20, Host memory: 135057 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2026.367 ; gain = 115.992 ; free physical = 96694 ; free virtual = 116329
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+Running package_xo -xo_path /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/impl/export.xo -kernel_name vmul -kernel_xml /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/impl/ip/../kernel/kernel.xml -kernel_files /home/rourab/Auto_FastFlow_fpga/kernels_src/vmul/vmul.cpp -ip_directory /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/impl/ip/ip_unzip_dir -design_xml /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/.autopilot/db/vmul.design.xml -debug_directory /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/.debug -hls_directory /home/rourab/Auto_FastFlow_fpga/auto_fast_flow/vmul/vmul/vmul/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Tue May  7 14:24:50 2024...

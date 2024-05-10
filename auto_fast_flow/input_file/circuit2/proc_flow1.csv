@@ -1,0 +1,5 @@
+fpga, src, krnl, dst
+0, 0, vadd2_1, 1
+0, 0, vadd2_2, 1
+0, 0, vadd2_3, 1
+0, 0, vadd2_4, 1

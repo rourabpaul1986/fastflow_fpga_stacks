@@ -1,0 +1,101 @@
+{
+    "0": {
+        "name": "vinc",
+        "file": "vinc.cpp",
+        "fileloc": "79",
+        "instructions": "34",
+        "total_instructions": "158",
+        "calls": "1 6 5 4",
+        "basicblocks": "1"
+    },
+    "1": {
+        "name": "entry_proc",
+        "file": "vinc.cpp",
+        "fileloc": "0",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "load_input_Pipeline_mem_rd",
+        "file": "vinc.cpp",
+        "fileloc": "0",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "compute_inc_Pipeline_execute",
+        "file": "vinc.cpp",
+        "fileloc": "0",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "store_result",
+        "file": "vinc.cpp",
+        "fileloc": "0",
+        "instructions": "21",
+        "total_instructions": "43",
+        "calls": "7",
+        "basicblocks": "1"
+    },
+    "5": {
+        "name": "compute_inc",
+        "file": "vinc.cpp",
+        "fileloc": "0",
+        "instructions": "15",
+        "total_instructions": "35",
+        "calls": "3",
+        "basicblocks": "1"
+    },
+    "6": {
+        "name": "load_input",
+        "file": "vinc.cpp",
+        "fileloc": "0",
+        "instructions": "20",
+        "total_instructions": "42",
+        "calls": "2",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "store_result_Pipeline_mem_wr",
+        "file": "vinc.cpp",
+        "fileloc": "0",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}
