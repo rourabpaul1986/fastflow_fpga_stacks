@@ -17,8 +17,8 @@ The available computation units are mentioned in ./input_file/circuit1/circuit1.
 
 ## Compile xclbin
 This example project consist of two xclbins
-1. vadd4_vinc4.xclbin : This hardware file has 4 vector addtion (vadd) and 4 vector increment (vinc). All the input and output port of vadd and vinc are connected with dedicated HBM slots to get maximum data speed. The practical data speed of each HBM slot is ~ 16GBps 
-2. vadd4_vinc4_vmul4.xclbin : This hardware file has 4 vectir addtion (vadd),  4 vector increment (vinc) and 4 vector multiplication (vmul). All the input and output port of vadd and vinc are connected with dedicated HBM slots to get maximum data speed.
+1. circuit1.xclbin : This hardware file has 4 vector addtion (vadd) and 4 vector increment (vinc). All the input and output port of vadd and vinc are connected with dedicated HBM slots to get maximum data speed. The practical data speed of each HBM slot is ~ 16GBps 
+2. circuit2.xclbin : This hardware file has 4 loop unrolled vector addtion (vadd),  4 loop unrolled vector increment (vinc) and 4 loop unrolled vector multiplication (vmul). All the input and output port of vadd and vinc are connected with dedicated HBM slots to get maximum data speed.
    
 ```bash
 python3 main.py xclbin ./input_file/circuit1/circuit1.csv to generate xclbin
