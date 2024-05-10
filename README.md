@@ -40,7 +40,7 @@ Below command deploy the process flow mentioned  proc_file.csv file on the FPGAs
 ```bash
 python3 main.py c n m proc_file.csv circuit.csv ff 
 ```
-```
+
 ## Clone 
 Please include lfs in clone command 
 ```bash
