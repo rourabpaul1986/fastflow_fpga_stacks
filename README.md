@@ -21,19 +21,16 @@ This example project consist of two xclbins
 2. vadd4_vinc4_vmul4.xclbin : This hardware file has 4 vectir addtion (vadd),  4 vector increment (vinc) and 4 vector multiplication (vmul). All the input and output port of vadd and vinc are connected with dedicated HBM slots to get maximum data speed.
    
 ```bash
-cd kernels/
-make all TARGET=hw # sw_emu or hw_emu
+python3 main.py xclbin ./input_file/circuit1/circuit1.csv to generate xclbin
 ```
-The above mentioned command takes 3 connectivity.ini file named as vadd_connectivity.ini,vinc_connectivity.ini and vmul_connectivity.ini files. These ini files are used to mentionmemory connections with multiple computation units.
-## Compile host
+The above mentioned command generate connectivity.cfg files named as vadd_connectivity.cfg,vinc_connectivity.cfg and vmul_connectivity.cfg files. These cfg files are used to mentionmemory connections with multiple computation units.
+## Compile testcases
 ```bash
 cd auto_fast_flow
-python3 main.py
+python3 main.py test
 # the main.py has 3 responsibility
-#1 . takes 2 files as input 1)input_files/proc_flow.csv and 2)input_files/circuit.csv
-#2 . generates host.cpp to run in host computer
-#3 . compile host.cpp and generate output host
-#4 . run host
+ takes 5 process flows stored inside test_case directory as input and check whether it is giving desired outputs or not
+
 ```
 Usage:
         ./[outputfile] [file.xclbin] [chain_tasks] [vec_elems] [vec_nums]
