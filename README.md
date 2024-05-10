@@ -1,4 +1,4 @@
-# Auto_FastFlow_fpga
+# FatsFlow for FPGA Stacks 
 Experimental [`FastFlow`](https://github.com/fastflow/fastflow) node called `FNodeTask` to offload computation of `Vitis HLS` kernels on Alveo FPGAs.
 The `FNodeTask` can be used in any place where you need an `ff_node`/`ff_node_t`.
 It offloads tasks to pre-compiled kernels on an Alveo FPGA
