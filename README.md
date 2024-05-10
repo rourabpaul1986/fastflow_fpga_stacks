@@ -6,8 +6,8 @@ It offloads tasks to pre-compiled kernels on an Alveo FPGA
 ## Input Files
 The `auto_fast_flow` program is capable to execute farms and pipes of different process flows in multiple FPGAs. The Auto_FastFlow_fpga program take 2 input files
 ```
-#1. ./input_file/process_flow.csv
-#2. ./input_file/circuit.csv
+#1. ./input_file/circuit1/process_flow1.csv
+#2. ./input_file/circuit1/circuit1.csv
 ```
 process flows is described in ./input_file/circuit1/process_flow1.csv. 
 The available computation units are mentioned in ./input_file/circuit1/circuit1.csv.
