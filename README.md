@@ -20,8 +20,9 @@ This example project consist of two xclbins
 1. circuit1.xclbin : This hardware file has 4 vector addtion (vadd) and 4 vector increment (vinc). All the input and output port of vadd and vinc are connected with dedicated HBM slots to get maximum data speed. The practical data speed of each HBM slot is ~ 16GBps 
 2. circuit2.xclbin : This hardware file has 4 loop unrolled vector addtion (vadd),  4 loop unrolled vector increment (vinc) and 4 loop unrolled vector multiplication (vmul). All the input and output port of vadd and vinc are connected with dedicated HBM slots to get maximum data speed.
 
-   to generate xclbin
+  
 ```bash
+# to generate xclbin
 python3 main.py xclbin ./input_file/circuit1/circuit1.csv 
 ```
 The above mentioned command generate connectivity.cfg files named as vadd_connectivity.cfg,vinc_connectivity.cfg and vmul_connectivity.cfg files. These cfg files are used to mentionmemory connections with multiple computation units.
