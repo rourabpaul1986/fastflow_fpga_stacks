@@ -1,10 +1,13 @@
 ### circuit.csv
+The 1st column: ckt_name,
+The 2nd column: input_name,
+The 3rd column: no. of input, 
+The 4th column: output_name, 
+The 5th column: no. of output,
+The 6th column: mem addr, strating memory slot (HBM slot number in this case) 
+The 7th column: no. of max kernel,
+The 8th column: loc of kernel src
 
-The list of available circuits.
-The 1st column: name of the cus.
-The 2nd column: name of the ports.
-The 3rd column: numbe of ports.
-The 4th column: strating memory slot (HBM slot number in this case)
 ### proc_flow.csv
 The format of proc_flow.csv is :
 ```
